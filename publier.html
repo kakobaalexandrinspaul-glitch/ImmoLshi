@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publier un bien — ImmoLshi</title>
+  <!-- Liens vers les feuilles de style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/publier.css">
+  <!-- FontAwesome pour les icônes -->
+  <link rel="stylesheet" href="https://cloudflare.com">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="https://cloudflare.com">
+
+</head>
+<body>
+
+  <div class="dashboard-layout">
+    
+    <!-- ==================== SIDEBAR COMPONENT ==================== -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-brand">
+        <div class="logo-box"><i class="fa-solid fa-building-user"></i></div>
+        <span>ImmoLshi</span>
+      </div>
+      <div class="sidebar-user">
+        <img src="https://unsplash.com" alt="Utilisateur" class="sidebar-avatar">
+        <div class="user-meta">
+          <h5>Patrick Kasongo</h5>
+          <span class="user-role">Propriétaire</span>
+        </div>
+      </div>
+      <nav class="sidebar-menu">
+        <ul>
+          <li><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Vue d'ensemble</a></li>
+          <li><a href="publier.html" class="active"><i class="fa-solid fa-circle-plus"></i> Publier un bien</a></li>
+          <li><a href="annonces.html"><i class="fa-solid fa-house-chimney"></i> Mes annonces</a></li>
+          <li><a href="favoris.html"><i class="fa-solid fa-heart"></i> Mes favoris</a></li>
+          <li><a href="profil.html"><i class="fa-solid fa-user-gear"></i> Mon profil</a></li>
+          <li class="menu-divider"></li>
+          <li><a href="../index.html" class="logout-link"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ==================== MAIN CONTENT AREA ==================== -->
+    <main class="dashboard-main">
+      
+      <header class="dashboard-header">
+        <div class="welcome-text">
+          <h2>Publier une nouvelle annonce</h2>
+          <p>Remplissez le formulaire ci-dessous pour rendre votre bien visible à Lubumbashi.</p>
+        </div>
+      </header>
+
+      <!-- Formulaire de publication -->
+      <form action="dashboard.html" method="POST" class="publish-form" enctype="multipart/form-data">
+        
+        <!-- Section : Informations générales -->
+        <div class="form-section-card">
+          <h3><i class="fa-solid fa-circle-info"></i> Informations de base</h3>
+          
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="title">Titre de l'annonce</label>
+              <input type="text" id="title" name="title" placeholder="Ex: Bel appartement moderne à louer" required>
+            </div>
+            <div class="form-field">
+              <label for="property-type">Type de bien</label>
+              <select id="property-type" name="type" required>
+                <option value="villa">Villa</option>
+                <option value="appartement">Appartement</option>
+                <option value="studio">Studio</option>
+                <option value="terrain">Terrain</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="purpose">Type d'offre</label>
+              <select id="purpose" name="purpose" required>
+                <option value="location">Location</option>
+                <option value="vente">Vente</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="price">Prix demandé (USD)</label>
+              <input type="number" id="price" name="price" placeholder="Ex: 850" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section : Localisation & Caractéristiques -->
+        <div class="form-section-card">
+          <h3><i class="fa-solid fa-map-location-dot"></i> Localisation & Espaces</h3>
+          
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="commune">Commune de Lubumbashi</label>
+              <select id="commune" name="commune" required>
+                <option value="lubumbashi">Lubumbashi (Centre-ville)</option>
+                <option value="golf">Golf</option>
+                <option value="kamalondo">Kamalondo</option>
+                <option value="kampemba">Kampemba</option>
+                <option value="katuba">Katuba</option>
+                <option value="kenya">Kenya</option>
+                <option value="ruashi">Ruashi</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="surface">Superficie (m²)</label>
+              <input type="number" id="surface" name="surface" placeholder="Ex: 120" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="rooms">Nombre de chambres</label>
+              <input type="number" id="rooms" name="rooms" min="0" placeholder="Ex: 3">
+            </div>
+            <div class="form-field">
+              <label for="bathrooms">Salles de bain</label>
+              <input type="number" id="bathrooms" name="bathrooms" min="0" placeholder="Ex: 2">
+            </div>
+          </div>
+        </div>
+
+        <!-- Section : Médias & Photos -->
+        <div class="form-section-card">
+          <h3><i class="fa-solid fa-images"></i> Photos du bien</h3>
+          <p class="section-desc">Ajoutez des images claires pour attirer plus de clients (Format JPG/PNG).</p>
+          
+          <div class="upload-zone">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <p>Glissez vos fichiers ici ou cliquez pour parcourir</p>
+            <input type="file" id="images" name="images[]" multiple accept="image/*">
+          </div>
+        </div>
+
+        <!-- Boutons de validation -->
+        <div class="form-actions-row">
+          <button type="button" class="btn-cancel" onclick="window.location.href='dashboard.html'">Annuler</button>
+          <button type="submit" class="btn-submit">Mettre en ligne l'annonce</button>
+        </div>
+
+      </form>
+    </main>
+  </div>
+
+</body>
+</html>

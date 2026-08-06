@@ -1,0 +1,294 @@
+/* ==========================================================================
+   PROPERTY DETAILS PAGE STYLES
+   ========================================================================== */
+
+.details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 24px 80px 24px;
+}
+
+.details-breadcrumbs {
+  margin-bottom: 24px;
+}
+
+.details-breadcrumbs a {
+  text-decoration: none;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.details-breadcrumbs a:hover {
+  color: #c85a17;
+}
+
+/* Galerie Photos Grid */
+.property-gallery {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 16px;
+  height: 480px;
+  margin-bottom: 40px;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbs-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.thumbs-column img {
+  width: 100%;
+  height: calc(33.333% - 11px);
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.thumbs-column img:hover, .thumbs-column img.active {
+  opacity: 1;
+  border: 2px solid #c85a17;
+}
+
+/* Layout à deux colonnes */
+.property-main-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Colonne de Gauche */
+.info-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 12px 0 8px 0;
+  color: #1a1a1a;
+}
+
+.badges-row {
+  display: flex;
+  gap: 8px;
+}
+
+.detail-badge {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.location-text {
+  color: #666666;
+  font-size: 15px;
+}
+
+/* Barre de caractéristiques */
+.specs-bar {
+  display: flex;
+  gap: 24px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  margin: 32px 0;
+}
+
+.spec-item-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.spec-item-box i {
+  font-size: 24px;
+  color: #c85a17;
+}
+
+.spec-item-box span {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.spec-item-box small {
+  color: #666666;
+  font-size: 12px;
+}
+
+/* Blocs de texte communs */
+.info-block {
+  margin-bottom: 40px;
+}
+
+.info-block h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 8px;
+}
+
+.info-block p {
+  color: #444444;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.amenities-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  list-style: none;
+}
+
+.amenities-list li {
+  font-size: 15px;
+  color: #444444;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.amenities-list i {
+  color: #164225; /* Couleur verte */
+}
+
+/* Colonne de Droite (Sidebar de prix/action) */
+.action-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  position: sticky;
+  top: 90px;
+}
+
+.card-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #666666;
+  text-transform: uppercase;
+}
+
+.price-display {
+  font-size: 32px;
+  font-weight: 700;
+  color: #c85a17;
+  margin: 4px 0 24px 0;
+}
+
+.agent-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 16px 0;
+  margin-bottom: 24px;
+}
+
+.agent-profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.agent-profile h5 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.agent-profile small {
+  color: #666666;
+}
+
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-sidebar-primary {
+  background-color: #c85a17;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-sidebar-secondary {
+  border: 1px solid #cccccc;
+  color: #1a1a1a;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-favorite-toggle {
+  background: none;
+  border: none;
+  color: #666666;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .property-gallery {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .thumbs-column {
+    flex-direction: row;
+    height: 80px;
+  }
+  .thumbs-column img {
+    height: 100%;
+    width: calc(33.333% - 11px);
+  }
+  .property-main-layout {
+    grid-template-columns: 1fr;
+  }
+}

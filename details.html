@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa moderne avec piscine — ImmoLshi</title>
+  <!-- Lien vers la feuille de style principale -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Feuille de style dédiée aux détails du bien -->
+  <link rel="stylesheet" href="assets/details.css">
+  <!-- FontAwesome pour les icônes -->
+  <link rel="stylesheet" href="https://cloudflare.com">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <div class="logo-box">
+          <i class="fa-solid fa-building-user"></i>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">ImmoLshi</span>
+          <span class="brand-city">LUBUMBASHI</span>
+        </div>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="annonces.html" class="active">Annonces</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle" aria-label="Mode sombre">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <a href="connexion.html" class="link-connexion">Connexion</a>
+        <a href="inscription.html" class="btn-inscription">S'inscrire</a>
+        <button class="menu-burger" aria-label="Menu mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="details-container">
+    
+    <!-- Fil d'Ariane / Retour -->
+    <div class="details-breadcrumbs">
+      <a href="annonces.html"><i class="fa-solid fa-chevron-left"></i> Retour aux annonces</a>
+    </div>
+
+    <!-- Galerie de photos -->
+    <section class="property-gallery">
+      <div class="main-image">
+        <img src="https://unsplash.com" alt="Vue principale villa">
+      </div>
+      <div class="thumbs-column">
+        <img src="https://unsplash.com" alt="Miniature 1" class="active">
+        <img src="https://unsplash.com" alt="Miniature 2">
+        <img src="https://unsplash.com" alt="Miniature 3">
+      </div>
+    </section>
+
+    <!-- Layout à deux colonnes -->
+    <div class="property-main-layout">
+      
+      <!-- Colonne de Gauche : Infos sur le bien -->
+      <section class="property-info-col">
+        <div class="info-header">
+          <div class="badges-row">
+            <span class="detail-badge badge-blue">À Vendre</span>
+            <span class="detail-badge badge-black">Villa</span>
+          </div>
+          <h1>Villa moderne avec piscine — Golf</h1>
+          <p class="location-text"><i class="fa-solid fa-location-dot"></i> Quartier Golf, Lubumbashi, RD Congo</p>
+        </div>
+
+        <!-- Chiffres clés -->
+        <div class="specs-bar">
+          <div class="spec-item-box">
+            <i class="fa-solid fa-bed"></i>
+            <div>
+              <span>5</span>
+              <small>Chambres</small>
+            </div>
+          </div>
+          <div class="spec-item-box">
+            <i class="fa-solid fa-bath"></i>
+            <div>
+              <span>4</span>
+              <small>Salles de bain</small>
+            </div>
+          </div>
+          <div class="spec-item-box">
+            <i class="fa-solid fa-maximize"></i>
+            <div>
+              <span>420 m²</span>
+              <small>Superficie</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="info-block">
+          <h3>Description du bien</h3>
+          <p>Magnifique villa contemporaine située au cœur du prestigieux quartier Golf à Lubumbashi. Ce bien d'exception offre des volumes généreux, une luminosité maximale grâce à ses grandes baies vitrées, et des finitions haut de gamme.</p>
+          <p>À l'extérieur, vous profiterez d'un grand jardin arboré, d'une magnifique piscine à débordement avec terrasse en bois, ainsi que d'un garage couvert pour deux véhicules. Quartier hautement sécurisé et paisible.</p>
+        </div>
+
+        <!-- Équipements -->
+        <div class="info-block">
+          <h3>Équipements & Commodités</h3>
+          <ul class="amenities-list">
+            <li><i class="fa-solid fa-check"></i> Piscine privée</li>
+            <li><i class="fa-solid fa-check"></i> Groupe électrogène de secours</li>
+            <li><i class="fa-solid fa-check"></i> Citerne d'eau & Hydrophore</li>
+            <li><i class="fa-solid fa-check"></i> Climatisation</li>
+            <li><i class="fa-solid fa-check"></i> Clôture électrique & Guérite</li>
+            <li><i class="fa-solid fa-check"></i> Connexion internet Fibre</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Colonne de Droite : Encart de contact / Prix -->
+      <aside class="property-sidebar-col">
+        <div class="action-card">
+          <span class="card-label">Prix de vente</span>
+          <div class="price-display">280,000 USD</div>
+          
+          <div class="agent-profile">
+            <img src="https://unsplash.com" alt="Agent ImmoLshi">
+            <div>
+              <h5>Christophe Muteba</h5>
+              <small>Propriétaire certifié</small>
+            </div>
+          </div>
+
+          <div class="sidebar-buttons">
+            <a href="paiement.html" class="btn-sidebar-primary"><i class="fa-solid fa-credit-card"></i> Acheter ce bien</a>
+            <a href="contact.html" class="btn-sidebar-secondary"><i class="fa-regular fa-comment-dots"></i> Contacter</a>
+          </div>
+          
+          <button class="btn-favorite-toggle"><i class="fa-regular fa-heart"></i> Ajouter aux favoris</button>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="main-footer">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <div class="logo-box-light"><i class="fa-solid fa-building-user"></i></div>
+          <span>ImmoLshi</span>
+        </div>
+        <p>La plateforme immobilière de référence à Lubumbashi, RD Congo.</p>
+      </div>
+      <div class="footer-links-col">
+        <h4>NAVIGATION</h4>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="annonces.html">Annonces</a></li>
+          <li> <a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4>SERVICES</h4>
+        <ul>
+          <li><a href="#">Vente immobilière</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Gestion locative</a></li>
+          <li><a href="#">Évaluation de bien</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4>CONTACT</h4>
+        <ul class="contact-info">
+          <li><i class="fa-solid fa-location-dot"></i> Avenue Kasumbalesa, Kamalondo</li>
+          <li><i class="fa-solid fa-phone"></i> +243 73216322</li>
+           <li><i class="fa-solid fa-envelope"></i> info@immolshi.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ImmoLshi. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

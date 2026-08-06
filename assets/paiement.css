@@ -1,0 +1,267 @@
+/* ==========================================================================
+   SECURE PAYMENT PAGE STYLES
+   ========================================================================== */
+
+.secure-tag {
+  font-size: 14px;
+  color: #15803d;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.payment-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 80px 24px;
+}
+
+.payment-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.payment-methods-col h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.payment-methods-col .subtitle {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Cartes des choix de paiement */
+.method-option-card {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Conteneur radio personnalisé */
+.radio-container {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 32px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #ffffff;
+  border: 2px solid #cccccc;
+  border-radius: 50%;
+}
+
+.radio-container input:checked ~ .radio-checkmark {
+  border-color: #c85a17;
+}
+
+.radio-checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 4px;
+  left: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c85a17;
+}
+
+.radio-container input:checked ~ .radio-checkmark::after {
+  display: block;
+}
+
+.method-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.method-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.method-desc {
+  font-size: 13px;
+  color: #666666;
+}
+
+/* Champs dépliés */
+.method-expanded-fields {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444444;
+}
+
+.form-field input, .form-field select {
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fafafa;
+  outline: none;
+}
+
+.form-field input:focus, .form-field select:focus {
+  border-color: #c85a17;
+  background-color: #ffffff;
+}
+
+/* Bouton de paiement */
+.btn-pay-submit {
+  background-color: #164225; /* Vert sécurité */
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn-pay-submit:hover {
+  background-color: #0f2e1a;
+}
+
+/* Colonne Récapitulatif */
+.summary-card {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.summary-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.summary-property-preview {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 16px;
+}
+
+.summary-property-preview img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.summary-property-preview h4 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.summary-property-preview p {
+  font-size: 12px;
+  color: #666666;
+}
+
+.summary-price-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.summary-price-list li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555555;
+}
+
+.summary-price-list .total-row {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 16px;
+  margin-top: 4px;
+  color: #1a1a1a;
+}
+
+.summary-price-list .total-row strong {
+  font-size: 18px;
+  color: #c85a17;
+}
+
+.guarantee-box {
+  background-color: #f0f7f4;
+  border-radius: 6px;
+  padding: 16px;
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.guarantee-box i {
+  color: #15803d;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.guarantee-box p {
+  font-size: 12px;
+  color: #15803d;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .payment-layout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,68 +1,148 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImmoLshi</title>
+
+    <title>Tableau de bord | ImmoLshi</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/dashboard.css">
     <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-   <header class="header">
 
-    <div class="container">
+</body>
+</html>
 
-        <a href="../index.html" class="logo">
+  <div class="dashboard-layout">
+    
+    <!-- ==================== SIDEBAR COMPONENT (sidebar.html) ==================== -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-brand">
+        <div class="logo-box">
+          <i class="fa-solid fa-building-user"></i>
+        </div>
+        <span>ImmoLshi</span>
+      </div>
 
-            <img src="assets/images/logos/i.png" alt="Logo ImmoLshi">
+      <div class="sidebar-user">
+        <img src="https://unsplash.com" alt="Utilisateur" class="sidebar-avatar">
+        <div class="user-meta">
+          <h5>Patrick Kasongo</h5>
+          <span class="user-role">Propriétaire</span>
+        </div>
+      </div>
 
-            <div class="logo-text">
+      <nav class="sidebar-menu">
+        <ul>
+          <li><a href="dashboard.html" class="active"><i class="fa-solid fa-chart-pie"></i> Vue d'ensemble</a></li>
+          <li><a href="publier.html"><i class="fa-solid fa-circle-plus"></i> Publier un bien</a></li>
+          <li><a href="annonces.html"><i class="fa-solid fa-house-chimney"></i> Mes annonces</a></li>
+          <li><a href="favoris.html"><i class="fa-solid fa-heart"></i> Mes favoris</a></li>
+          <li><a href="profil.html"><i class="fa-solid fa-user-gear"></i> Mon profil</a></li>
+          <li class="menu-divider"></li>
+          <li><a href="../index.html" class="logout-link"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-                <h2>ImmoLshi</h2>
+    <!-- ==================== MAIN CONTENT AREA ==================== -->
+    <main class="dashboard-main">
+      
+      <!-- Barre supérieure du tableau de bord -->
+      <header class="dashboard-header">
+        <div class="welcome-text">
+          <h2>Bonjour, Patrick</h2>
+          <p>Voici un aperçu de vos activités immobilières à Lubumbashi.</p>
+        </div>
+        
+        <div class="header-actions">
+          <button class="notif-btn" aria-label="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="badge-count">2</span>
+          </button>
+          <a href="publier.html" class="btn-dash-primary"><i class="fa-solid fa-plus"></i> Nouveau bien</a>
+        </div>
+      </header>
 
-                <span>LUBUMBASHI RD CONGO</span>
+      <!-- Grille de statistiques rapides -->
+      <section class="dash-stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon icon-orange"><i class="fa-solid fa-house-laptop"></i></div>
+          <div class="stat-data">
+            <h3>4</h3>
+            <p>Biens publiés</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon icon-green"><i class="fa-solid fa-wallet"></i></div>
+          <div class="stat-data">
+            <h3>1,550 USD</h3>
+            <p>Gains ce mois</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon icon-blue"><i class="fa-solid fa-eye"></i></div>
+          <div class="stat-data">
+            <h3>324</h3>
+            <p>Vues totales</p>
+          </div>
+        </div>
+      </section>
 
-            </div>
-
-        </a>
-
-        <nav class="navbar">
-
-            <ul>
-
-                <li><a href="../index.html" class="active">Accueil</a></li>
-
-                <li><a href="../pages/annonces.html">Annonces</a></li>
-
-            </ul>
-
-        </nav>
-
-        <nav class="navbar">
-  <!-- Icône Mode Sombre (Croissant de lune) -->
-  <button class="icon-btn" aria-label="Mode sombre">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-    </svg>
-  </button>
-
-  <!-- Liens et Boutons d'action -->
-  <div class="nav-actions">
-    <a href="#" class="link-connexion">Connexion</a>
-    <a href="#" class="btn-inscription">S'inscrire</a>
-  </div>
-
-  <!-- Menu Burger (Trois barres) -->
-  <button class="menu-burger" aria-label="Menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</nav>
-
-
+      <!-- Section de contenu mixte -->
+      <div class="dash-content-row">
+        
+        <!-- Bloc : Activités Récentes -->
+        <div class="content-block list-block">
+          <div class="block-header">
+            <h3>Activités récentes</h3>
+          </div>
+          <ul class="activity-list">
+            <li>
+              <div class="activity-marker marker-green"></div>
+              <div class="activity-detail">
+                <p>Paiement reçu pour <strong>Appartement Centre-ville</strong></p>
+                <small>Il y a 2 heures · +1,200 USD</small>
+              </div>
+            </li>
+            <li>
+              <div class="activity-marker marker-orange"></div>
+              <div class="activity-detail">
+                <p>Nouvelle visite planifiée pour <strong>Studio Kamalondo</strong></p>
+                <small>Hier à 14:30</small>
+              </div>
+            </li>
+            <li>
+              <div class="activity-marker marker-blue"></div>
+              <div class="activity-detail">
+                <p>Votre annonce <strong>Villa Golf</strong> a été validée</p>
+                <small>Il y a 3 jours</small>
+              </div>
+            </li>
+          </ul>
         </div>
 
-    </div>
+        <!-- Bloc : Conseil / Raccourci rapide -->
+        <div class="content-block tip-block">
+          <h3>Besoin d'aide ?</h3>
+          <p>Consultez nos guides ou contactez directement le support ImmoLshi disponible pour vous accompagner dans la gestion locative.</p>
+          <a href="contact.html" class="btn-dash-outline">Contacter le support</a>
+        </div>
 
-</header> 
+      </div>
+
+    </main>
+  </div>
+
 </body>
 </html>

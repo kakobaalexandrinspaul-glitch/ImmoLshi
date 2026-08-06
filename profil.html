@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Profil — ImmoLshi</title>
+  <!-- Liens vers les feuilles de style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/profil.css">
+  <!-- FontAwesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+
+<body>
+
+  <div class="dashboard-layout">
+    
+    <!-- ==================== SIDEBAR COMPONENT ==================== -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-brand">
+        <div class="logo-box"><i class="fa-solid fa-building-user"></i></div>
+        <span>ImmoLshi</span>
+      </div>
+      <div class="sidebar-user">
+        <img src="https://unsplash.com" alt="Utilisateur" class="sidebar-avatar">
+        <div class="user-meta">
+          <h5>Patrick Kasongo</h5>
+          <span class="user-role">Propriétaire</span>
+        </div>
+      </div>
+      <nav class="sidebar-menu">
+        <ul>
+          <li><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Vue d'ensemble</a></li>
+          <li><a href="publier.html"><i class="fa-solid fa-circle-plus"></i> Publier un bien</a></li>
+          <li><a href="annonces.html"><i class="fa-solid fa-house-chimney"></i> Mes annonces</a></li>
+          <li><a href="favoris.html"><i class="fa-solid fa-heart"></i> Mes favoris</a></li>
+          <li><a href="profil.html" class="active"><i class="fa-solid fa-user-gear"></i> Mon profil</a></li>
+          <li class="menu-divider"></li>
+          <li><a href="../index.html" class="logout-link"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ==================== MAIN CONTENT AREA ==================== -->
+    <main class="dashboard-main">
+      
+      <header class="dashboard-header">
+        <div class="welcome-text">
+          <h2>Paramètres du profil</h2>
+          <p>Mettez à jour vos données privées et gérez la sécurité de votre accès.</p>
+        </div>
+      </header>
+
+      <div class="profile-container-layout">
+        
+        <!-- Formulaire de gauche : Informations personnelles -->
+        <form action="dashboard.html" method="POST" class="profile-main-form">
+          <div class="form-section-card">
+            <h3><i class="fa-regular fa-id-card"></i> Données personnelles</h3>
+            
+            <div class="avatar-edit-zone">
+              <img src="https://unsplash.com" alt="Photo de profil actuelle">
+              <div class="avatar-actions">
+                <label for="avatar-upload" class="btn-avatar-upload">
+                  <i class="fa-solid fa-camera"></i> Changer la photo
+                </label>
+                <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+                <p class="file-limits">JPG ou PNG. Max 2 Mo.</p>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label for="fullname">Nom complet</label>
+                <input type="text" id="fullname" name="fullname" value="Patrick Kasongo" required>
+              </div>
+              <div class="form-field">
+                <label for="email">Adresse email</label>
+                <input type="email" id="email" name="email" value="patrick.kasongo@exemple.cd" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label for="phone">Numéro de téléphone</label>
+                <input type="tel" id="phone" name="phone" value="+243 975 000 100" required>
+              </div>
+              <div class="form-field">
+                <label for="location">Ville de résidence</label>
+                <input type="text" id="location" name="location" value="Lubumbashi" readonly>
+              </div>
+            </div>
+
+            <div class="form-actions-row">
+              <button type="submit" class="btn-submit">Enregistrer les modifications</button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Formulaire de droite : Sécurité & Mot de passe -->
+        <aside class="profile-security-sidebar">
+          <form action="dashboard.html" method="POST" class="form-section-card">
+            <h3><i class="fa-solid fa-shield-halved"></i> Sécurité</h3>
+            
+            <div class="form-field spacing-bottom">
+              <label for="current-password">Mot de passe actuel</label>
+              <input type="password" id="current-password" placeholder="••••••••" required>
+            </div>
+
+            <div class="form-field spacing-bottom">
+              <label for="new-password">Nouveau mot de passe</label>
+              <input type="password" id="new-password" placeholder="••••••••" required>
+            </div>
+
+            <div class="form-field spacing-bottom">
+              <label for="confirm-password">Confirmer le mot de passe</label>
+              <input type="password" id="confirm-password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn-submit btn-full-width">Mettre à jour le mot de passe</button>
+          </form>
+        </aside>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

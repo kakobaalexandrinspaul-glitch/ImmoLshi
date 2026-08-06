@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toutes les annonces — ImmoLshi</title>
+  <!-- Lien vers la feuille de style principale (ajusté avec ../ pour sortir de pages/) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Feuille de style dédiée aux annonces -->
+  <link rel="stylesheet" href="assets/annonces.css">
+  <!-- FontAwesome pour les icônes -->
+  <link rel="stylesheet" href="https://cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <div class="logo-box">
+          <i class="fa-solid fa-building-user"></i>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">ImmoLshi</span>
+          <span class="brand-city">LUBUMBASHI</span>
+        </div>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="annonces.html" class="active">Annonces</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle" aria-label="Mode sombre">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <a href="connexion.html" class="link-connexion">Connexion</a>
+        <a href="inscription.html" class="btn-inscription">S'inscrire</a>
+        <button class="menu-burger" aria-label="Menu mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== SEARCH & FILTERS SECTION ==================== -->
+  <section class="search-filter-section">
+    <div class="filter-container">
+      <form class="filter-form">
+        <!-- Filtre : Type de transaction -->
+        <div class="filter-group">
+          <label for="transaction-type">Transaction</label>
+          <select id="transaction-type" name="transaction">
+            <option value="">Tout afficher</option>
+            <option value="louer">Louer</option>
+            <option value="acheter">Aacheter</option>
+          </select>
+        </div>
+
+        <!-- Filtre : Type de bien -->
+        <div class="filter-group">
+          <label for="property-type">Type de bien</label>
+          <select id="property-type" name="type">
+            <option value="">Tous les types</option>
+            <option value="villa">Villa</option>
+            <option value="appartement">Appartement</option>
+            <option value="studio">Studio</option>
+          </select>
+        </div>
+
+        <!-- Filtre : Commune de Lubumbashi -->
+        <div class="filter-group">
+          <label for="commune">Commune</label>
+          <select id="commune" name="commune">
+            <option value="">Toutes les communes</option>
+            <option value="Lubumbashi">Lubumbashi (Centre-ville)</option>
+            <option value="Golf">Golf</option>
+            <option value="Kamalondo">Kamalondo</option>
+            <option value="Kampemba">Kampemba</option>
+            <option value="Katuba">Katuba</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Ruashi">Ruashi</option>
+            <option value="Annexe">Annexe</option>
+          </select>
+        </div>
+
+        <!-- Filtre : Budget Max -->
+        <div class="filter-group">
+          <label for="price-max">Budget max (USD)</label>
+          <input type="number" id="price-max" name="price_max" placeholder="Ex: 1500">
+        </div>
+
+        <!-- Bouton Appliquer -->
+        <button type="submit" class="btn-filter-submit">
+          <i class="fa-solid fa-magnifying-glass"></i> Filtrer
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==================== LISTING SECTION ==================== -->
+  <main class="listings-container">
+    <div class="listings-header">
+      <h2>Annonces immobilières disponibles</h2>
+      <p><span class="results-count">3</span> biens trouvés à Lubumbashi</p>
+    </div>
+
+    <!-- Grille des annonces (Réutilise la structure property-card) -->
+    <div class="properties-grid">
+      <!-- Card 1 -->
+      <article class="property-card">
+        <a href="details.html" class="card-link">
+          <div class="card-image-wrapper">
+            <img src="assets/images/villa-moderne.jpg" alt="Villa moderne">
+            <span class="badge badge-blue">Vente</span>
+            <span class="badge badge-black badge-right">Villa</span>
+          </div>
+          <div class="card-body">
+            <h4>Villa moderne avec piscine — Golf</h4>
+            <p class="property-location"><i class="fa-solid fa-location-dot"></i> Golf, Meteo 1</p>
+            <div class="card-footer">
+              <span class="property-price">280,000 USD</span>
+              <span class="property-specs">5 ch · 420 m²</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="property-card">
+        <a href="details.html" class="card-link">
+          <div class="card-image-wrapper">
+            <img src="assets/images/appartement-3-chambres.jpg" alt="Appartement 3 chambres">
+            <span class="badge badge-purple">Location</span>
+            <span class="badge badge-black badge-right">Appartement</span>
+          </div>
+          <div class="card-body">
+            <h4>Appartement 3 chambres — Centre-ville</h4>
+            <p class="property-location"><i class="fa-solid fa-location-dot"></i> Centre-ville, Lubumbashi</p>
+            <div class="card-footer">
+              <span class="property-price">1,200 USD<small>/mois</small></span>
+              <span class="property-specs">3 ch · 140 m²</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+<article class="property-card">
+  <a href="details.html" class="card-link">
+    <div class="card-image-wrapper">
+      <img src="assets/images/parcelle-terre.jpg" alt="Parcelle à vendre">
+      <span class="badge badge-blue">Vente</span>
+      <span class="badge badge-black badge-right">Parcelle</span>
+    </div>
+    <div class="card-body">
+      <h4>Parcelle à vendre — Kasapa</h4>
+      <p class="property-location"><i class="fa-solid fa-location-dot"></i> Kasapa, Lubumbashi</p>
+      <div class="card-footer">
+        <span class="property-price">25,000 USD</span>
+        <span class="property-specs">800 m²</span>
+      </div>
+    </div>
+  </a>
+</article>
+
+      <!-- Card 3 -->
+      <article class="property-card">
+        <a href="details.html" class="card-link">
+          <div class="card-image-wrapper">
+            <img src="assets/images/studio-moderne.jpg" alt="Studio meublé">
+            <span class="badge badge-purple">Location</span>
+            <span class="badge badge-black badge-right">Studio</span>
+          </div>
+          <div class="card-body">
+            <h4>Studio meublé — Kamalondo</h4>
+            <p class="property-location"><i class="fa-solid fa-location-dot"></i>  Kamalondo</p>
+            <div class="card-footer">
+              <span class="property-price">350 USD<small>/mois</small></span>
+              <span class="property-specs">1 ch · 45 m²</span>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="main-footer">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <div class="logo-box-light"><i class="fa-solid fa-building-user"></i></div>
+          <span>ImmoLshi</span>
+        </div>
+        <p>La plateforme immobilière de référence à Lubumbashi, RD Congo.</p>
+        <div class="social-links">
+  <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+  <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+</div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>NAVIGATION</h4>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="annonces.html">Annonces</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>SERVICES</h4>
+        <ul>
+          <li><a href="#">Vente immobilière</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Gestion locative</a></li>
+          <li><a href="#">Évaluation de bien</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>CONTACT</h4>
+        <ul class="contact-info">
+          <li><i class="fa-solid fa-location-dot"></i> Avenue Kasumbalesa, Kamalondo,<br>Lubumbashi, RDC</li>
+          <li><i class="fa-solid fa-phone"></i> +243 975 000 100</li>
+          <li><i class="fa-solid fa-envelope"></i> info@immo-lshi.cd</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 ImmoLshi. Tous droits réservés.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Confidentialité</a>
+        <a href="#">Conditions d'utilisation</a>
+        <a href="#">Mentions légales</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

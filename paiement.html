@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paiement sécurisé — ImmoLshi</title>
+  <!-- Liens vers les feuilles de style -->
+  <link class="css-link" rel="stylesheet" href="../assets/css/style.css">
+  <link class="css-link" rel="stylesheet" href="assets/paiement.css">
+  <!-- FontAwesome pour les icônes -->
+  <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <div class="logo-box"><i class="fa-solid fa-building-user"></i></div>
+        <div class="logo-text">
+          <span class="brand-name">ImmoLshi</span>
+          <span class="brand-city">LUBUMBASHI</span>
+        </div>
+      </div>
+      <div class="nav-right">
+        <span class="secure-tag"><i class="fa-solid fa-lock"></i> Paiement 100% sécurisé</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="payment-container">
+    
+    <div class="payment-layout">
+      
+      <!-- Colonne de gauche : Formulaire et choix du mode de paiement -->
+      <section class="payment-methods-col">
+        <h2>Méthode de paiement</h2>
+        <p class="subtitle">Sélectionnez votre mode de règlement préféré pour finaliser l'opération.</p>
+
+        <form action="dashboard.html" method="POST" class="payment-form">
+          
+          <!-- Option Mobile Money -->
+          <div class="method-option-card">
+            <label class="radio-container">
+              <input type="radio" name="payment_method" value="mobile_money" checked>
+              <span class="radio-checkmark"></span>
+              <div class="method-details">
+                <span class="method-title">Mobile Money (RDC)</span>
+                <span class="method-desc">M-Pesa, Orange Money, Airtel Money</span>
+              </div>
+            </label>
+            
+            <!-- Champs spécifiques au Mobile Money -->
+            <div class="method-expanded-fields">
+              <div class="form-field">
+                <label for="operator">Opérateur</label>
+                <select id="operator" name="operator">
+                  <option value="mpesa">M-Pesa (Vodacom)</option>
+                  <option value="orange">Orange Money</option>
+                  <option value="airtel">Airtel Money</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="phone-payment">Numéro de téléphone lié au compte</label>
+                <input type="tel" id="phone-payment" placeholder="Ex: +243 812 000 000">
+              </div>
+            </div>
+          </div>
+
+          <!-- Option Carte Bancaire -->
+          <div class="method-option-card">
+            <label class="radio-container">
+              <input type="radio" name="payment_method" value="card">
+              <span class="radio-checkmark"></span>
+              <div class="method-details">
+                <span class="method-title">Carte de crédit / Débit</span>
+                <span class="method-desc">Visa, MasterCard</span>
+              </div>
+            </label>
+          </div>
+
+          <!-- Bouton de validation finale -->
+          <button type="submit" class="btn-pay-submit">
+            <i class="fa-solid fa-shield-halved"></i> Confirmer et payer l'acompte
+          </button>
+        </form>
+      </section>
+
+      <!-- Colonne de droite : Récapitulatif de la commande -->
+      <aside class="payment-summary-col">
+        <div class="summary-card">
+          <h3>Récapitulatif</h3>
+          
+          <div class="summary-property-preview">
+            <img src="https://unsplash.com" alt="Villa Golf">
+            <div>
+              <h4>Villa moderne — Golf</h4>
+              <p><i class="fa-solid fa-location-dot"></i> Quartier Golf, Kenya</p>
+            </div>
+          </div>
+
+          <ul class="summary-price-list">
+            <li>
+              <span>Prix du bien</span>
+              <strong>280,000 USD</strong>
+            </li>
+            <li>
+              <span>Frais de dossier ImmoLshi</span>
+              <span>150 USD</span>
+            </li>
+            <li class="total-row">
+              <span>Acompte à verser en ligne</span>
+              <strong>2,950 USD</strong>
+            </li>
+          </ul>
+
+          <div class="guarantee-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Vos fonds sont bloqués de manière sécurisée par ImmoLshi jusqu'à la signature définitive de votre contrat.</p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+</body>
+</html>
