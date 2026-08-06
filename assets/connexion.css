@@ -1,0 +1,310 @@
+/* ==========================================================================
+   1. VARIABLES & CONFIGURATION DE BASE
+   ========================================================================== */
+:root {
+    --primary-color: #1e3a8a;      /* Bleu corporate immobilier */
+    --secondary-color: #f59e0b;    /* Orange/Ambre pour les accents */
+    --text-dark: #1f2937;          /* Gris très foncé pour le texte principal */
+    --text-muted: #6b7280;         /* Gris moyen pour les paragraphes et icônes */
+    --bg-light: #f3f4f6;           /* Fond de page gris clair */
+    --card-bg: #ffffff;            /* Fond de la carte de connexion */
+    --border-color: #e5e7eb;       /* Bordure des inputs */
+    --radius-md: 8px;              /* Arrondi standard */
+    --radius-lg: 16px;             /* Arrondi pour la carte */
+    --transition-fast: 0.2s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   2. BOUTON RETOUR À L'ACCUEIL
+   ========================================================================== */
+.back-home-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition-fast);
+}
+
+.back-home-btn:hover {
+    color: var(--primary-color);
+    transform: translateX(-3px);
+}
+
+/* ==========================================================================
+   3. CONTENEUR & CARTE D'AUTHENTIFICATION
+   ========================================================================== */
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-card {
+    background-color: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* En-tête */
+.auth-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.logo-box {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(30, 58, 138, 0.1); /* Bleu primaire transparent */
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+.auth-header h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   4. FORMULAIRE & INPUTS
+   ========================================================================== */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot-password {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Champs de saisie (Wrappers) */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 15px 12px 45px; /* Espace à gauche pour l'icône */
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    background-color: #fafafa;
+    outline: none;
+    transition: var(--transition-fast);
+}
+
+/* Input mot de passe : espace à droite pour l'œil */
+.input-wrapper input[type="password"],
+.input-wrapper input[type="text"] {
+    padding-right: 45px;
+}
+
+.input-wrapper input:focus {
+    border-color: var(--primary-color);
+    background-color: var(--card-bg);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
+}
+
+/* Bouton pour afficher le mot de passe */
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 5px;
+}
+
+.password-toggle:hover {
+    color: var(--text-dark);
+}
+
+/* ==========================================================================
+   5. OPTIONS & CHECKBOX
+   ========================================================================== */
+.form-options {
+    margin-top: 5px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--primary-color); /* Colore le carré par défaut */
+}
+
+/* ==========================================================================
+   6. BOUTON DE SOUMISSION & PIED DE PAGE
+   ========================================================================== */
+.btn-auth-submit {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition-fast);
+    margin-top: 10px;
+}
+
+.btn-auth-submit:hover {
+    background-color: #12255c; /* Bleu plus sombre */
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+}
+
+.btn-auth-submit i {
+    transition: var(--transition-fast);
+}
+
+.btn-auth-submit:hover i {
+    transform: translateX(3px); /* Petit effet de mouvement sur l'icône de connexion */
+}
+
+/* Pied de carte */
+.auth-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.auth-footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+.terms-link {
+  color: #c85a17;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.field-error {
+  color: #d90429;
+  font-size: 0.9rem;
+  margin-top: 0.35rem;
+  display: block;
+}
+
+.form-message {
+  color: #d90429;
+  margin: 1rem 0 0;
+  font-size: 0.95rem;
+}
+
+.input-wrapper input[aria-invalid="true"] {
+  border-color: #d90429;
+}
+/* ==========================================================================
+   7. ADAPTATION ÉCRANS MOBILES
+   ========================================================================== */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;
+        padding-top: 80px;
+    }
+    
+    .back-home-btn {
+        top: 20px;
+        left: 20px;
+    }
+
+    .auth-card {
+        padding: 30px 20px;
+        box-shadow: none; /* Simplification sur petit écran */
+        background: transparent;
+    }
+}

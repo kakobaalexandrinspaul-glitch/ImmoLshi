@@ -3,82 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connexion — ImmoLshi</title>
-  <!-- Lien vers la feuille de style principale (ajusté pour le dossier pages/) -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <!-- Feuille de style dédiée à la page de connexion -->
+  <title>Inscription — ImmoLshi</title>
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/inscription.css">
-  <!-- FontAwesome pour les icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-  <!-- Conteneur principal de la page d'authentification -->
   <div class="auth-container">
-    
-    <!-- Bouton de retour à l'accueil -->
-    <a href="../index.html" class="back-home-btn">
+    <a href="index.html" class="back-home-btn">
       <i class="fa-solid fa-arrow-left"></i> Retour à l'accueil
     </a>
 
     <div class="auth-card">
-      <!-- En-tête de la carte -->
       <div class="auth-header">
         <div class="logo-box">
           <i class="fa-solid fa-building-user"></i>
         </div>
-        <h2>Bienvenue sur ImmoLshi</h2>
-        <p>Connectez-vous pour gérer vos biens ou poursuivre vos recherches.</p>
+        <h2>Créer un compte</h2>
+        <p>Rejoignez ImmoLshi pour publier vos offres ou trouver votre futur bien.</p>
       </div>
 
-      <!-- Formulaire de connexion -->
-      <form action="dashboard.html" method="POST" class="auth-form">
-        
-        <!-- Groupe : Email -->
+      <form action="dashboard.html" method="POST" class="auth-form" novalidate>
+        <div class="form-group">
+          <label for="fullname">Nom complet</label>
+          <div class="input-wrapper">
+            <i class="fa-regular fa-user input-icon"></i>
+            <input type="text" id="fullname" name="fullname" autocomplete="name" placeholder="Ex: alexandrins Paul Kakoba Jr" required>
+          </div>
+          <span class="field-error" id="fullnameError"></span>
+        </div>
+
         <div class="form-group">
           <label for="email">Adresse email</label>
           <div class="input-wrapper">
             <i class="fa-regular fa-envelope input-icon"></i>
-            <input type="email" id="email" name="email" placeholder="exemple@immo-lshi.cd" required>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="exemple@immo-lshi.cd" required>
           </div>
+          <span class="field-error" id="emailError"></span>
         </div>
 
-        <!-- Groupe : Mot de passe -->
         <div class="form-group">
-          <div class="label-row">
-            <label for="password">Mot de passe</label>
-            <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+          <label for="phone">Numéro de téléphone</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-phone input-icon"></i>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="Ex: +243 975 000 100" required>
           </div>
+          <span class="field-error" id="phoneError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
           <div class="input-wrapper">
             <i class="fa-solid fa-lock input-icon"></i>
-            <input type="password" id="password" name="password" placeholder="••••••••" required>
-            <button type="button" class="password-toggle" aria-label="Afficher le mot de passe">
-              <i class="fa-regular fa-eye"></i>
-            </button>
+            <input type="password" id="password" name="password" autocomplete="new-password" placeholder="••••••••" required>
           </div>
+          <span class="field-error" id="passwordError"></span>
         </div>
 
-        <!-- Options supplémentaires (Se souvenir de moi) -->
         <div class="form-options">
           <label class="checkbox-container">
-            <input type="checkbox" name="remember">
+            <input type="checkbox" name="terms" id="terms" required>
             <span class="checkmark"></span>
-            Se souvenir de moi
+            J'accepte les <a href="#" class="terms-link">conditions d'utilisation</a>
           </label>
+          <span class="field-error" id="termsError"></span>
         </div>
 
-        <!-- Bouton de soumission -->
+        <div class="form-message" id="formMessage"></div>
+
         <button type="submit" class="btn-auth-submit">
-          Se connecter <i class="fa-solid fa-right-to-bracket"></i>
+          S'inscrire <i class="fa-solid fa-user-plus"></i>
         </button>
       </form>
 
-      <!-- Pied de la carte -->
       <div class="auth-footer">
-        <p>Nouveau sur la plateforme ? <a href="inscription.html">Créez un compte ici</a></p>
+        <p>Déjà membre ? <a href="connexion.html">Connectez-vous ici</a></p>
       </div>
     </div>
   </div>
-
 </body>
 </html>
