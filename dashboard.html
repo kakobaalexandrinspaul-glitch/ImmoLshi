@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord | ImmoLshi</title>
 
-    <title>Tableau de bord | ImmoLshi</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/dashboard.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/dashboard.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
-</body>
-</html>
-
   <div class="dashboard-layout">
-    
-    <!-- ==================== SIDEBAR COMPONENT (sidebar.html) ==================== -->
+
+    <!-- SIDEBAR COMPONENT -->
     <aside class="dashboard-sidebar">
       <div class="sidebar-brand">
         <div class="logo-box">
@@ -35,7 +28,7 @@
       </div>
 
       <div class="sidebar-user">
-        <img src="https://unsplash.com" alt="Utilisateur" class="sidebar-avatar">
+        <img src="assets/images/user-avatar.jpg" alt="Utilisateur" class="sidebar-avatar">
         <div class="user-meta">
           <h5>Patrick Kasongo</h5>
           <span class="user-role">Propriétaire</span>
@@ -50,21 +43,20 @@
           <li><a href="favoris.html"><i class="fa-solid fa-heart"></i> Mes favoris</a></li>
           <li><a href="profil.html"><i class="fa-solid fa-user-gear"></i> Mon profil</a></li>
           <li class="menu-divider"></li>
-          <li><a href="../index.html" class="logout-link"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a></li>
+          <li><a href="index.html" class="logout-link"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a></li>
         </ul>
       </nav>
     </aside>
 
-    <!-- ==================== MAIN CONTENT AREA ==================== -->
+    <!-- MAIN CONTENT AREA -->
     <main class="dashboard-main">
-      
-      <!-- Barre supérieure du tableau de bord -->
+
       <header class="dashboard-header">
         <div class="welcome-text">
           <h2>Bonjour, Patrick</h2>
           <p>Voici un aperçu de vos activités immobilières à Lubumbashi.</p>
         </div>
-        
+
         <div class="header-actions">
           <button class="notif-btn" aria-label="Notifications">
             <i class="fa-regular fa-bell"></i>
@@ -74,7 +66,6 @@
         </div>
       </header>
 
-      <!-- Grille de statistiques rapides -->
       <section class="dash-stats-grid">
         <div class="stat-card">
           <div class="stat-icon icon-orange"><i class="fa-solid fa-house-laptop"></i></div>
@@ -86,7 +77,7 @@
         <div class="stat-card">
           <div class="stat-icon icon-green"><i class="fa-solid fa-wallet"></i></div>
           <div class="stat-data">
-            <h3>1,550 USD</h3>
+            <h3>1 550 USD</h3>
             <p>Gains ce mois</p>
           </div>
         </div>
@@ -99,10 +90,8 @@
         </div>
       </section>
 
-      <!-- Section de contenu mixte -->
       <div class="dash-content-row">
-        
-        <!-- Bloc : Activités Récentes -->
+
         <div class="content-block list-block">
           <div class="block-header">
             <h3>Activités récentes</h3>
@@ -112,7 +101,7 @@
               <div class="activity-marker marker-green"></div>
               <div class="activity-detail">
                 <p>Paiement reçu pour <strong>Appartement Centre-ville</strong></p>
-                <small>Il y a 2 heures · +1,200 USD</small>
+                <small>Il y a 2 heures · +1 200 USD</small>
               </div>
             </li>
             <li>
@@ -132,7 +121,6 @@
           </ul>
         </div>
 
-        <!-- Bloc : Conseil / Raccourci rapide -->
         <div class="content-block tip-block">
           <h3>Besoin d'aide ?</h3>
           <p>Consultez nos guides ou contactez directement le support ImmoLshi disponible pour vous accompagner dans la gestion locative.</p>
