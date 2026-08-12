@@ -9,126 +9,190 @@
   <link rel="stylesheet" href="assets/dashboard.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
-  <div class="dashboard-layout">
-
-    <!-- SIDEBAR COMPONENT -->
-    <aside class="dashboard-sidebar">
-      <div class="sidebar-brand">
-        <div class="logo-box">
-          <i class="fa-solid fa-building-user"></i>
+  <!-- BARRE DE NAVIGATION SUPERIEURE -->
+  <header class="dash-navbar">
+    <div class="nav-left-brand">
+      <div class="brand-logo">
+        <div class="logo-icon-box">
+          <i class="fa-solid fa-hotel"></i>
         </div>
-        <span>ImmoLshi</span>
-      </div>
-
-      <div class="sidebar-user">
-        <img src="assets/images/user-avatar.jpg" alt="Utilisateur" class="sidebar-avatar">
-        <div class="user-meta">
-          <h5>Patrick Kasongo</h5>
-          <span class="user-role">Propriétaire</span>
+        <div class="logo-titles">
+          <span class="logo-main">ImmoLshi</span>
+          <span class="logo-sub">LUBUMBASHI</span>
         </div>
       </div>
+    </div>
+    
+    <div class="nav-center-links">
+      <a href="index.html">Accueil</a>
+      <a href="annonces.html">Annonces</a>
+    </div>
 
-      <nav class="sidebar-menu">
-        <ul>
-          <li><a href="dashboard.html" class="active"><i class="fa-solid fa-chart-pie"></i> Vue d'ensemble</a></li>
-          <li><a href="publier.html"><i class="fa-solid fa-circle-plus"></i> Publier un bien</a></li>
-          <li><a href="annonces.html"><i class="fa-solid fa-house-chimney"></i> Mes annonces</a></li>
-          <li><a href="favoris.html"><i class="fa-solid fa-heart"></i> Mes favoris</a></li>
-          <li><a href="profil.html"><i class="fa-solid fa-user-gear"></i> Mon profil</a></li>
-          <li class="menu-divider"></li>
-          <li><a href="index.html" class="logout-link"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a></li>
-        </ul>
+    <div class="user-profile-dropdown">
+  
+  <!-- Déclencheur (La pastille visible dans la barre) -->
+  <div class="dropdown-trigger">
+    <img src="https://unsplash.com" alt="paul" class="nav-avatar">
+    <span class="nav-username">paul</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+
+  <!-- Le Menu Déroulant (Dropdown Content) -->
+  <div class="dropdown-menu-content">
+    
+    <!-- En-tête : Infos de l'utilisateur -->
+    <div class="dropdown-user-header">
+      <h4 class="user-fullname">alexandrins Paul Kakoba Jr</h4>
+      <span class="user-email">alexandrinsPaulKakobaJr@gmail.com</span>
+      <span class="badge-role-client">Client</span>
+    </div>
+
+    <!-- Liens d'action -->
+    <div class="dropdown-links-list">
+      <a href="dashboard.html" class="dropdown-link-item">
+        <i class="fa-solid fa-table-cells-large"></i> Tableau de bord
+      </a>
+      <a href="profil.html" class="dropdown-link-item">
+        <i class="fa-regular fa-user"></i> Mon profil
+      </a>
+      <a href="../index.html" class="dropdown-link-item logout-danger">
+        <i class="fa-solid fa-right-from-bracket"></i> Déconnexion
+      </a>
+    </div>
+
+  </div>
+</div>
+
+      <button class="burger-menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- CLOISON CENTRALE (SIDEBAR + MAIN) -->
+  <div class="main-dashboard-wrapper">
+    
+    <!-- SIDEBAR GAUCHE -->
+    <aside class="sidebar-panel">
+      <div class="sidebar-profile-card">
+        <img src="https://unsplash.com" alt="alexandrins Paul Kakoba Jr" class="profile-large-avatar">
+        <h3 class="profile-name">alexandrins Paul Kakoba Jr</h3>
+        <span class="profile-email">alexandrinspaulkakobajr@gmail.com</span>
+        <span class="status-badge">Client actif</span>
+      </div>
+
+      <nav class="sidebar-navigation">
+        <a href="dashboard.html" class="nav-item-link active"><i class="fa-solid fa-grid-2"></i> Aperçu</a>
+        <a href="reservations.html" class="nav-item-link"><i class="fa-regular fa-calendar"></i> Réservations</a>
+        <a href="favoris.html" class="nav-item-link"><i class="fa-regular fa-heart"></i> Favoris</a>
+        <a href="contrats.html" class="nav-item-link"><i class="fa-regular fa-file-lines"></i> Contrats</a>
+        <a href="historique.html" class="nav-item-link"><i class="fa-solid fa-clock-rotate-left"></i> Historique</a>
       </nav>
+
+      <div class="sidebar-footer-action">
+        <a href="annonces.html" class="btn-search-property">Chercher un bien</a>
+      </div>
     </aside>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="dashboard-main">
+    <!-- ZONE DE CONTENU PRINCIPALE -->
+    <main class="content-display-panel">
+      
+      <div class="welcome-header">
+        <h1>Bonjour, alexandrins Paul Kakoba Jr 👋</h1>
+        <p>Voici un aperçu de votre activité sur ImmoLshi</p>
+      </div>
 
-      <header class="dashboard-header">
-        <div class="welcome-text">
-          <h2>Bonjour, Patrick</h2>
-          <p>Voici un aperçu de vos activités immobilières à Lubumbashi.</p>
-        </div>
-
-        <div class="header-actions">
-          <button class="notif-btn" aria-label="Notifications">
-            <i class="fa-regular fa-bell"></i>
-            <span class="badge-count">2</span>
-          </button>
-          <a href="publier.html" class="btn-dash-primary"><i class="fa-solid fa-plus"></i> Nouveau bien</a>
-        </div>
-      </header>
-
-      <section class="dash-stats-grid">
-        <div class="stat-card">
-          <div class="stat-icon icon-orange"><i class="fa-solid fa-house-laptop"></i></div>
-          <div class="stat-data">
-            <h3>4</h3>
-            <p>Biens publiés</p>
+      <!-- COMPTEURS / STATISTIQUES -->
+      <section class="counters-grid">
+        
+        <div class="counter-card">
+          <div class="counter-icon-wrapper color-orange">
+            <i class="fa-regular fa-calendar-days"></i>
+          </div>
+          <div class="counter-numbers">
+            <h2>2</h2>
+            <p>Réservations</p>
           </div>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon icon-green"><i class="fa-solid fa-wallet"></i></div>
-          <div class="stat-data">
-            <h3>1 550 USD</h3>
-            <p>Gains ce mois</p>
+
+        <div class="counter-card">
+          <div class="counter-icon-wrapper color-teal">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <div class="counter-numbers">
+            <h2>0</h2>
+            <p>En cours</p>
           </div>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon icon-blue"><i class="fa-solid fa-eye"></i></div>
-          <div class="stat-data">
-            <h3>324</h3>
-            <p>Vues totales</p>
+
+        <div class="counter-card">
+          <div class="counter-icon-wrapper color-pink">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="counter-numbers">
+            <h2>3</h2>
+            <p>Favoris</p>
           </div>
         </div>
+
+        <div class="counter-card">
+          <div class="counter-icon-wrapper color-blue">
+            <i class="fa-regular fa-file-lines"></i>
+          </div>
+          <div class="counter-numbers">
+            <h2>1</h2>
+            <p>Contrats</p>
+          </div>
+        </div>
+
       </section>
 
-      <div class="dash-content-row">
-
-        <div class="content-block list-block">
-          <div class="block-header">
-            <h3>Activités récentes</h3>
+      <!-- LISTE DES RESERVATIONS RECENTES -->
+      <section class="recent-activities-section">
+        <h3 class="section-block-title">Réservations récentes</h3>
+        
+        <div class="activities-stack">
+          
+          <!-- Ligne 1 -->
+          <div class="activity-row-item">
+            <div class="activity-meta">
+              <h4>Villa moderne avec piscine — Golf</h4>
+              <p>Réservé le 12/06/2026 · Virement bancaire</p>
+            </div>
+            <div class="activity-status-price">
+              <span class="price-tag">280,000 USD</span>
+              <span class="status-pill status-completed">Terminé</span>
+            </div>
           </div>
-          <ul class="activity-list">
-            <li>
-              <div class="activity-marker marker-green"></div>
-              <div class="activity-detail">
-                <p>Paiement reçu pour <strong>Appartement Centre-ville</strong></p>
-                <small>Il y a 2 heures · +1 200 USD</small>
-              </div>
-            </li>
-            <li>
-              <div class="activity-marker marker-orange"></div>
-              <div class="activity-detail">
-                <p>Nouvelle visite planifiée pour <strong>Studio Kamalondo</strong></p>
-                <small>Hier à 14:30</small>
-              </div>
-            </li>
-            <li>
-              <div class="activity-marker marker-blue"></div>
-              <div class="activity-detail">
-                <p>Votre annonce <strong>Villa Golf</strong> a été validée</p>
-                <small>Il y a 3 jours</small>
-              </div>
-            </li>
-          </ul>
-        </div>
 
-        <div class="content-block tip-block">
-          <h3>Besoin d'aide ?</h3>
-          <p>Consultez nos guides ou contactez directement le support ImmoLshi disponible pour vous accompagner dans la gestion locative.</p>
-          <a href="contact.html" class="btn-dash-outline">Contacter le support</a>
-        </div>
+          <!-- Ligne 2 -->
+          <div class="activity-row-item">
+            <div class="activity-meta">
+              <h4>Villa 4 chambres — Ruashi</h4>
+              <p>Réservé le 26/07/2026 · M-Pesa</p>
+            </div>
+            <div class="activity-status-price">
+              <span class="price-tag">1,800 USD</span>
+              <span class="status-pill status-pending">En attente</span>
+            </div>
+          </div>
 
-      </div>
+        </div>
+      </section>
 
     </main>
   </div>
 
+  <!-- BOUTON FLOTTANT AIDE -->
+  <button class="floating-help-btn">?</button>
+
 </body>
 </html>
+
+  

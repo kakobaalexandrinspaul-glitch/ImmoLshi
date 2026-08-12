@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Réservations — ImmoLshi</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard-client.css">
+  <link rel="stylesheet" href="assets/reservations.css">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<!-- ==================== BARRE DE NAVIGATION EN HAUT ==================== -->
+  <header class="dash-navbar">
+    <div class="nav-left-brand">
+      <div class="brand-logo">
+        <div class="logo-icon-box">
+          <i class="fa-solid fa-hotel"></i>
+        </div>
+        <div class="logo-titles">
+          <span class="logo-main">ImmoLshi</span>
+          <span class="logo-sub">LUBUMBASHI</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="nav-center-links">
+      <a href="../index.html">Accueil</a>
+      <a href="annonces.html">Annonces</a>
+    </div>
+
+    <div class="nav-right-user">
+      <button class="icon-action-btn" aria-label="Mode sombre"><i class="fa-regular fa-moon"></i></button>
+      <button class="icon-action-btn" aria-label="Notifications">
+        <i class="fa-regular fa-bell"></i>
+        <span class="notif-dot"></span>
+      </button>
+      <div class="user-profile-dropdown">
+        <div class="dropdown-trigger">
+          <img src="https://unsplash.com" alt="Eric" class="nav-avatar">
+          <span class="nav-username">alexandrins Paul Kakoba Jr</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+      <button class="burger-menu-btn" aria-label="Menu mobile"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- ==================== AGENCEMENT CENTRAL (SIDEBAR + CONTENU) ==================== -->
+  <div class="main-dashboard-wrapper">
+    
+    <!-- PANNEAU DE NAVIGATION LATÉRAL GAUCHE (SIDEBAR) -->
+    <aside class="sidebar-panel">
+      <!-- Bloc Profil Utilisateur -->
+      <div class="sidebar-profile-card">
+        <img src="https://unsplash.com" alt="alexandrins Paul Kakoba Jr" class="profile-large-avatar">
+        <h3 class="profile-name">alexandrins Paul Kakoba Jr</h3>
+        <span class="profile-email">alexandrins.paul.kakoba.jr@gmail.com</span>
+        <span class="status-badge">Client actif</span>
+      </div>
+
+      <!-- Menu d'onglets (Réservations est sélectionné en orange) -->
+      <nav class="sidebar-navigation">
+        <a href="dashboard.html" class="nav-item-link"><i class="fa-solid fa-table-cells-large"></i> Aperçu</a>
+        <a href="reservations.html" class="nav-item-link active"><i class="fa-regular fa-calendar"></i> Réservations</a>
+        <a href="favoris.html" class="nav-item-link"><i class="fa-regular fa-heart"></i> Favoris</a>
+        <a href="contrats.html" class="nav-item-link"><i class="fa-regular fa-file-lines"></i> Contrats</a>
+        <a href="historique.html" class="nav-item-link"><i class="fa-solid fa-clock-rotate-left"></i> Historique</a>
+      </nav>
+
+      <!-- Bouton d'action inférieur fixe -->
+      <div class="sidebar-footer-action">
+        <a href="annonces.html" class="btn-search-property">Chercher un bien</a>
+      </div>
+    </aside>
+
+    <!-- ZONE DE CONTENU PRINCIPALE (PANNEAU DROIT) -->
+    <main class="content-display-panel">
+      
+      <div class="welcome-header">
+        <h1 class="page-main-title">Mes réservations</h1>
+      </div>
+
+      <div class="reservations-list-container">
+        
+        <!-- BLOC RÉSERVATION 1 : TERMINÉ -->
+        <div class="reservation-block-item">
+          <div class="item-header-row">
+            <div class="property-meta-info">
+              <h3>Villa moderne avec piscine — Golf</h3>
+              <span class="ref-number">Réf: R1 - 12/06/2026</span>
+            </div>
+            <span class="status-badge-pill pill-blue">Terminé</span>
+          </div>
+          
+          <div class="item-data-grid">
+            <div class="data-cell">
+              <span class="data-label">Montant</span>
+              <strong class="data-value">280,000 USD</strong>
+            </div>
+            <div class="data-cell">
+              <span class="data-label">Commission</span>
+              <strong class="data-value">14000 USD</strong>
+            </div>
+            <div class="data-cell">
+              <span class="data-label">Paiement</span>
+              <span class="data-value">Virement bancaire</span>
+            </div>
+            <div class="data-cell">
+              <span class="data-label">Propriétaire</span>
+              <span class="data-value">Kasongo Mutombo</span>
+            </div>
+          </div>
+
+          <div class="item-actions-footer">
+            <div class="footer-left-buttons">
+              <button type="button" class="btn-action-text"><i class="fa-solid fa-download"></i> Télécharger contrat</button>
+              <button type="button" class="btn-action-text"><i class="fa-regular fa-comment"></i> Contacter propriétaire</button>
+              <button type="button" class="btn-action-text btn-text-disabled" disabled><i class="fa-regular fa-star"></i> Laisser un avis</button>
+            </div>
+            <div class="footer-right-buttons">
+              <button type="button" class="btn-action-text btn-text-danger"><i class="fa-solid fa-triangle-exclamation"></i> Signaler un problème</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- BLOC RÉSERVATION 2 : EN ATTENTE -->
+        <div class="reservation-block-item">
+          <div class="item-header-row">
+            <div class="property-meta-info">
+              <h3>Villa 4 chambres — Ruashi</h3>
+              <span class="ref-number">Réf: R3 - 26/07/2026</span>
+            </div>
+            <span class="status-badge-pill pill-yellow">En attente</span>
+          </div>
+          
+          <div class="item-data-grid">
+            <div class="data-cell">
+              <span class="data-label">Montant</span>
+              <strong class="data-value">1,800 USD</strong>
+            </div>
+            <div class="data-cell">
+              <span class="data-label">Commission</span>
+              <strong class="data-value">90 USD</strong>
+            </div>
+            <div class="data-cell">
+              <span class="data-label">Paiement</span>
+              <span class="data-value">M-Pesa</span>
+            </div>
+            <div class="data-cell">
+              <span class="data-label">Propriétaire</span>
+              <span class="data-value">Muteba Nkulu</span>
+            </div>
+          </div>
+
+          <div class="item-actions-footer">
+            <div class="footer-left-buttons">
+              <button type="button" class="btn-action-text"><i class="fa-regular fa-comment"></i> Contacter propriétaire</button>
+            </div>
+            <div class="footer-right-buttons">
+              <button type="button" class="btn-action-text btn-text-danger"><i class="fa-solid fa-triangle-exclamation"></i> Signaler un problème</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Bouton d'aide flottant -->
+  
+</body>
+</html>
