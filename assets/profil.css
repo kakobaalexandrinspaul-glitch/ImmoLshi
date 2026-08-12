@@ -10,7 +10,7 @@
   max-width: 1200px;
 }
 
-/* Zone d'édition de la photo d'avatar */
+/* Avatar edit section */
 .avatar-edit-zone {
   display: flex;
   align-items: center;
@@ -35,17 +35,17 @@
 }
 
 .btn-avatar-upload {
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  color: #333333;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  cursor: pointer;
   transition: border-color 0.2s;
 }
 
@@ -58,7 +58,6 @@
   color: #888888;
 }
 
-/* Espacements et ajustements du formulaire */
 .spacing-bottom {
   margin-bottom: 16px;
 }
@@ -68,7 +67,6 @@
   justify-content: center;
 }
 
-/* Structure globale du formulaire identique à publier.css */
 .form-section-card {
   background-color: #ffffff;
   padding: 30px;
@@ -77,13 +75,13 @@
 }
 
 .form-section-card h3 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 24px;
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
 }
 
 .form-section-card h3 i {
@@ -110,14 +108,14 @@
 }
 
 .form-field input {
+  width: 100%;
   padding: 11px 14px;
-  border: 1px solid #cccccc;
-  border-radius: 6px;
   font-size: 14px;
   background-color: #fafafa;
   color: #1a1a1a;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
   outline: none;
-  width: 100%;
 }
 
 .form-field input:focus {
@@ -138,13 +136,13 @@
 }
 
 .btn-submit {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
   background-color: #c85a17;
   border: none;
-  color: #ffffff;
-  padding: 12px 24px;
   border-radius: 6px;
-  font-weight: 600;
-  font-size: 14px;
   cursor: pointer;
 }
 
@@ -152,7 +150,6 @@
   background-color: #b04e14;
 }
 
-/* Réactivité mobile */
 @media (max-width: 992px) {
   .profile-container-layout {
     grid-template-columns: 1fr;
@@ -164,6 +161,7 @@
     grid-template-columns: 1fr;
     gap: 16px;
   }
+
   .avatar-edit-zone {
     flex-direction: column;
     text-align: center;

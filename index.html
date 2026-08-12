@@ -22,21 +22,32 @@
       </div>
 
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="pages/annonces.html">Annonces</a></li>
-      </ul>
+  <li><a href="index.html" class="active">Accueil</a></li>
+  <!-- Ce lien ramène à l'accueil et descend automatiquement aux annonces -->
+  <li><a href="index.html" class="active">Annonces</a></li>
+</ul>
 
-      <div class="nav-right">
-        <button class="theme-toggle" aria-label="Mode sombre">
-          <i class="fa-regular fa-moon"></i>
-        </button>
-        <a href="pages/connexion.html" class="link-connexion">Connexion</a>
-        <a href="pages/inscription.html" class="btn-inscription">S'inscrire</a>
-        <button class="menu-burger" aria-label="Menu mobile">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+
+     <div class="nav-right">
+  <!-- Bouton Mode sombre -->
+  <button class="theme-toggle" aria-label="Mode sombre">
+    <i class="fa-regular fa-moon"></i>
+  </button>
+  
+  <!-- Le lien pointe vers auth.html avec la bonne classe de navigation -->
+  <a href="pages/auth.html" class="link-connexion">Connexion</a>
+
+  <!-- Lien d'inscription -->
+  <a href="pages/inscription.html" class="btn-inscription">S'inscrire</a>
+  
+  <!-- Menu burger mobile -->
+  <button class="menu-burger" aria-label="Menu mobile">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</div>
+
       </div>
     </nav>
   </header>
@@ -307,10 +318,6 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>
 
-
-</body>
-</html>

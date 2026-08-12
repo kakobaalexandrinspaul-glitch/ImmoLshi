@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription Client — ImmoLshi</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/client.css">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="auth-split-container">
+    
+    <!-- PANNEAU GAUCHE -->
+    <div class="auth-visual-panel">
+      <div class="visual-overlay"></div>
+      
+      <div class="panel-content">
+        <div class="brand-logo">
+          <div class="logo-icon-box">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <div class="logo-titles">
+            <span class="logo-main">ImmoLshi</span>
+            <span class="logo-sub">LUBUMBASHI</span>
+          </div>
+        </div>
+
+        <h1 class="main-headline">L'immobilier de confiance à Lubumbashi</h1>
+        <p class="main-description">
+          Rejoignez plus de 1 284 utilisateurs qui font confiance à ImmoLshi pour leurs transactions immobilières en toute sécurité.
+        </p>
+
+        <ul class="trust-list">
+          <li><i class="fa-regular fa-circle-check"></i> Annonces vérifiées par notre équipe</li>
+          <li><i class="fa-regular fa-circle-check"></i> Paiements 100% sécurisés sur la plateforme</li>
+          <li><i class="fa-regular fa-circle-check"></i> Contrats générés automatiquement</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PANNEAU DROIT -->
+    <div class="auth-form-panel">
+      <div class="form-wrapper">
+        
+        <div class="auth-tabs">
+          <a href="auth.html" class="tab-item">Connexion</a>
+          <a href="inscription.html" class="tab-item active">Inscription</a>
+        </div>
+
+        <div class="form-welcome-row">
+          <a href="inscription.html" class="back-arrow-link">
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+          <h2>Inscription Client</h2>
+        </div>
+
+        <form action="dashboard.html" method="POST" class="split-auth-form">
+          
+          <div class="form-row-triple">
+            <div class="input-block">
+              <label for="lastname">Nom</label>
+              <input type="text" id="lastname" name="lastname" placeholder="Nom" required>
+            </div>
+            <div class="input-block">
+              <label for="midname">Postnom</label>
+              <input type="text" id="midname" name="midname" placeholder="Postnom" required>
+            </div>
+            <div class="input-block">
+              <label for="firstname">Prénom</label>
+              <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
+            </div>
+          </div>
+
+          <div class="input-block">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+243 975..." required>
+          </div>
+
+          <div class="input-block">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+          </div>
+
+          <div class="input-block">
+            <label for="password">Mot de passe</label>
+            <div class="password-field-container">
+              <input type="password" id="password" name="password" placeholder="Min. 8 caractères" minlength="8" required>
+              <button type="button" class="eye-toggle-btn">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-row-double">
+            <div class="input-block">
+              <label for="city">Ville</label>
+              <input type="text" id="city" name="city" value="Lubumbashi" required>
+            </div>
+            <div class="input-block">
+              <label for="commune">Commune</label>
+              <div class="select-wrapper">
+                <select id="commune" name="commune" required>
+                  <option value="" disabled selected>Sélectionner</option>
+                  <option value="lubumbashi">Lubumbashi</option>
+                  <option value="golf">Golf</option>
+                  <option value="kamalondo">Kamalondo</option>
+                  <option value="Rwashi">Rwashi</option>
+                  <option value="Kampemba">Kampemba</option>
+                  <option value="Annexe">Annexe</option>
+                  <option value="Katuba">Katuba</option>
+                  <option value="Kenya">Kenya</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-options-checkbox">
+            <label class="custom-checkbox-layout">
+              <input type="checkbox" name="terms" required>
+              <span class="custom-checkmark"></span>
+              <span class="checkbox-text">
+                J'accepte les <span class="accent-text">conditions d'utilisation</span> et la politique de confidentialité.
+              </span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-split-submit">Créer mon compte</button>
+        </form>
+
+        <div class="split-form-footer">
+          <p>Déjà un compte ? <a href="auth.html">Se connecter</a></p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

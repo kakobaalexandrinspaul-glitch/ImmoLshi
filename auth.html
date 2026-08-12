@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion — ImmoLshi</title>
+  <!-- Liens CSS corrigés avec le bon dossier et le recul de dossier (../) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/auth.css">
+  
+  <!-- Liens Google Fonts corrigés avec le préfixe "fonts." -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome pour les icônes de coche et d'œil -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="auth-split-container">
+    
+    <!-- PANNEAU GAUCHE : VISUEL & ACCROCHE -->
+    <div class="auth-visual-panel">
+      <div class="visual-overlay"></div>
+      
+      <div class="panel-content">
+        <!-- Logo de la marque -->
+        <div class="brand-logo">
+          <div class="logo-icon-box">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <div class="logo-titles">
+            <span class="logo-main">ImmoLshi</span>
+            <span class="logo-sub">LUBUMBASHI</span>
+          </div>
+        </div>
+
+        <!-- Accroches textuelles -->
+        <h1 class="main-headline">L'immobilier de confiance à Lubumbashi</h1>
+        <p class="main-description">
+          Rejoignez plus de 1 284 utilisateurs qui font confiance à ImmoLshi pour leurs transactions immobilières en toute sécurité.
+        </p>
+
+        <!-- Liste d'arguments professionnels -->
+        <ul class="trust-list">
+          <li><i class="fa-regular fa-circle-check"></i> Annonces vérifiées par notre équipe</li>
+          <li><i class="fa-regular fa-circle-check"></i> Paiements 100% sécurisés sur la plateforme</li>
+          <li><i class="fa-regular fa-circle-check"></i> Contrats générés automatiquement</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PANNEAU DROIT : FORMULAIRE -->
+    <div class="auth-form-panel">
+      <div class="form-wrapper">
+        
+        <!-- Onglets Supérieurs (Lien de connexion corrigé vers auth.html) -->
+        <div class="auth-tabs">
+          <a href="auth.html" class="tab-item active">Connexion</a>
+          <a href="inscription.html" class="tab-item">Inscription</a>
+        </div>
+
+        <!-- Titre d'accueil -->
+        <div class="form-welcome">
+          <h2>Bon retour !</h2>
+          <p>Connectez-vous à votre compte ImmoLshi</p>
+        </div>
+
+        <!-- Module de Comptes de Démonstration -->
+        <div class="demo-accounts-box">
+          <span class="demo-title">COMPTES DE DÉMONSTRATION</span>
+          <div class="demo-buttons">
+            <button type="button" class="btn-demo">Admin</button>
+            <button type="button" class="btn-demo">Propriétaire</button>
+            <button type="button" class="btn-demo">Client</button>
+          </div>
+        </div>
+
+        <!-- Formulaire de saisie -->
+        <form action="dashboard.html" method="POST" class="split-auth-form">
+          
+          <div class="input-block">
+            <label for="email">Adresse email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+          </div>
+
+          <div class="input-block">
+            <label for="password">Mot de passe</label>
+            <div class="password-field-container">
+              <input type="password" id="password" name="password" placeholder="••••••••" required>
+              <button type="button" class="eye-toggle-btn" aria-label="Afficher le mot de passe">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-split-submit">Se connecter</button>
+        </form>
+
+        <!-- Lien d'inscription bas de page -->
+        <div class="split-form-footer">
+          <p>Pas encore de compte ? <a href="inscription.html">S'inscrire</a></p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

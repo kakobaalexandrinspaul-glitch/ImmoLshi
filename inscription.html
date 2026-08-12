@@ -4,83 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inscription — ImmoLshi</title>
+  <!-- Liens CSS avec le recul de dossier (../) -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/inscription.css">
+  <link rel="stylesheet" href="assets/auth.css">
+  
+   <!-- Liens Google Fonts corrigés avec le préfixe "fonts." -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link href="https://googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- FontAwesome pour les icônes de la liste et des profils -->
+  
 </head>
 <body>
 
-  <div class="auth-container">
-    <a href="index.html" class="back-home-btn">
-      <i class="fa-solid fa-arrow-left"></i> Retour à l'accueil
-    </a>
-
-    <div class="auth-card">
-      <div class="auth-header">
-        <div class="logo-box">
-          <i class="fa-solid fa-building-user"></i>
-        </div>
-        <h2>Créer un compte</h2>
-        <p>Rejoignez ImmoLshi pour publier vos offres ou trouver votre futur bien.</p>
-      </div>
-
-      <form action="dashboard.html" method="POST" class="auth-form" novalidate>
-        <div class="form-group">
-          <label for="fullname">Nom complet</label>
-          <div class="input-wrapper">
-            <i class="fa-regular fa-user input-icon"></i>
-            <input type="text" id="fullname" name="fullname" autocomplete="name" placeholder="Ex: alexandrins Paul Kakoba Jr" required>
+  <div class="auth-split-container">
+    
+    <!-- PANNEAU GAUCHE : VISUEL & ACCROCHE (Identique à auth.html) -->
+    <div class="auth-visual-panel">
+      <div class="visual-overlay"></div>
+      
+      <div class="panel-content">
+        <!-- Logo de la marque -->
+        <div class="brand-logo">
+          <div class="logo-icon-box">
+            <i class="fa-solid fa-hotel"></i>
           </div>
-          <span class="field-error" id="fullnameError"></span>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Adresse email</label>
-          <div class="input-wrapper">
-            <i class="fa-regular fa-envelope input-icon"></i>
-            <input type="email" id="email" name="email" autocomplete="email" placeholder="exemple@immo-lshi.cd" required>
+          <div class="logo-titles">
+            <span class="logo-main">ImmoLshi</span>
+            <span class="logo-sub">LUBUMBASHI</span>
           </div>
-          <span class="field-error" id="emailError"></span>
         </div>
 
-        <div class="form-group">
-          <label for="phone">Numéro de téléphone</label>
-          <div class="input-wrapper">
-            <i class="fa-solid fa-phone input-icon"></i>
-            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="Ex: +243 975 000 100" required>
-          </div>
-          <span class="field-error" id="phoneError"></span>
-        </div>
+        <!-- Accroches textuelles -->
+        <h1 class="main-headline">L'immobilier de confiance à Lubumbashi</h1>
+        <p class="main-description">
+          Rejoignez plus de 1 284 utilisateurs qui font confiance à ImmoLshi pour leurs transactions immobilières en toute sécurité.
+        </p>
 
-        <div class="form-group">
-          <label for="password">Mot de passe</label>
-          <div class="input-wrapper">
-            <i class="fa-solid fa-lock input-icon"></i>
-            <input type="password" id="password" name="password" autocomplete="new-password" placeholder="••••••••" required>
-          </div>
-          <span class="field-error" id="passwordError"></span>
-        </div>
-
-        <div class="form-options">
-          <label class="checkbox-container">
-            <input type="checkbox" name="terms" id="terms" required>
-            <span class="checkmark"></span>
-            J'accepte les <a href="#" class="terms-link">conditions d'utilisation</a>
-          </label>
-          <span class="field-error" id="termsError"></span>
-        </div>
-
-        <div class="form-message" id="formMessage"></div>
-
-        <button type="submit" class="btn-auth-submit">
-          S'inscrire <i class="fa-solid fa-user-plus"></i>
-        </button>
-      </form>
-
-      <div class="auth-footer">
-        <p>Déjà membre ? <a href="connexion.html">Connectez-vous ici</a></p>
+        <!-- Liste d'arguments -->
+        <ul class="trust-list">
+          <li><i class="fa-regular fa-circle-check"></i> Annonces vérifiées par notre équipe</li>
+          <li><i class="fa-regular fa-circle-check"></i> Paiements 100% sécurisés sur la plateforme</li>
+          <li><i class="fa-regular fa-circle-check"></i> Contrats générés automatiquement</li>
+        </ul>
       </div>
     </div>
+
+    <!-- PANNEAU DROIT : SÉLECTION DU PROFIL D'INSCRIPTION -->
+    <div class="auth-form-panel">
+      <div class="form-wrapper">
+        
+        <!-- Onglets Supérieurs (Ici Inscription est actif avec sa bordure orange) -->
+        <div class="auth-tabs">
+          <a href="auth.html" class="tab-item">Connexion</a>
+          <a href="inscription.html" class="tab-item active">Inscription</a>
+        </div>
+
+        <!-- Titre d'accueil d'inscription -->
+        <div class="form-welcome">
+          <h2>Créer un compte</h2>
+          <p>Quel est votre profil ?</p>
+        </div>
+
+        <!-- Zone des cartes de sélection de profil -->
+        <div class="profile-selection-grid">
+          
+          <!-- Carte Profil : Client -->
+          <a href="form-client.html" class="profile-select-card">
+            <div class="profile-icon-box color-blue">
+              <i class="fa-regular fa-user"></i>
+            </div>
+            <h3>Client</h3>
+            <p>Je recherche un bien à louer ou acheter</p>
+          </a>
+
+          <!-- Carte Profil : Propriétaire -->
+          <a href="form-proprietaire.html" class="profile-select-card">
+            <div class="profile-icon-box color-orange">
+              <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <h3>Propriétaire</h3>
+            <p>Je veux publier mes biens immobiliers</p>
+          </a>
+
+        </div>
+
+        <!-- Lien alternatif de retour à la connexion en bas de page -->
+        <div class="split-form-footer text-center">
+          <p>Déjà un compte ? <a href="auth.html">Se connecter</a></p>
+        </div>
+
+      </div>
+    </div>
+
   </div>
+
 </body>
 </html>

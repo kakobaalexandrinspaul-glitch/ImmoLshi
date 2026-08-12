@@ -609,3 +609,53 @@ section {
     padding: 2rem 1rem;
   }
 }
+.nav-right {
+  position: relative; /* Permet de positionner le menu par rapport à ce bloc */
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #1a1a1a;
+  padding: 8px;
+}
+
+/* Style du petit menu caché par défaut */
+.toggle-menu {
+  display: none; /* Caché au départ */
+  position: absolute;
+  top: 45px; /* Aligné juste sous le bouton */
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 120px;
+  z-index: 100;
+}
+
+/* Liens à l'intérieur du menu */
+.toggle-menu a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.toggle-menu a:hover {
+  background-color: #f7f5f0;
+  color: #c85a17; /* Orange brique */
+}
+
+/* Classe active qui sera ajoutée en JavaScript pour afficher le menu */
+.toggle-menu.show {
+  display: block;
+}
