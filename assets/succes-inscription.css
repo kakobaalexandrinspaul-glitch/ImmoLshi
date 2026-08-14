@@ -1,0 +1,268 @@
+/* ==========================================================================
+   STYLE COMPLET DE LA PAGE DE CONFIRMATION (Fidèle à l'image)
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.auth-split-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fbf9f6;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   BLOC VISUEL DE GAUCHE (Image de fond + Teinte foncée)
+   -------------------------------------------------------------------------- */
+.auth-visual-panel {
+  flex: 1;
+  position: relative;
+  background-image: url('https://unsplash.com');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 80px;
+  color: #ffffff;
+}
+
+.visual-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 34, 27, 0.88);
+  z-index: 1;
+}
+
+.panel-content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 70px;
+}
+
+.logo-icon-box {
+  background-color: #cc5a27;
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 20px;
+}
+
+.logo-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-main {
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+}
+
+.logo-sub {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: #bfaea6;
+  font-weight: 600;
+}
+
+.main-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.main-description {
+  font-size: 15px;
+  color: #d1c5bc;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.trust-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trust-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #eae3dd;
+}
+
+.trust-list i {
+  color: #cc5a27;
+  font-size: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   BLOC MESSAGE DE DROITE
+   -------------------------------------------------------------------------- */
+.auth-form-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #fbf9f6;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 440px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.auth-tabs {
+  display: flex;
+  background-color: #efeae4;
+  padding: 6px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  text-decoration: none;
+  color: #8c827a;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.tab-item.active {
+  background-color: #ffffff;
+  color: #cc5a27;
+}
+
+/* Badge circulaire vert de succès */
+.success-icon-badge {
+  width: 56px;
+  height: 56px;
+  background-color: #e6f7ed;
+  color: #10b981;
+  font-size: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.success-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1512;
+  margin-bottom: 16px;
+}
+
+.success-description {
+  font-size: 14px;
+  color: #5c534c;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* Encadré jaune "Prochaines étapes" */
+.next-steps-card {
+  background-color: #fef3c7; /* Couleur jaune d'arrière-plan de l'image */
+  border-radius: 8px;
+  padding: 24px;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.next-steps-card h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #92400e; /* Teinte de texte marron/ocre */
+  margin-bottom: 12px;
+}
+
+.steps-bullet-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.steps-bullet-list li {
+  font-size: 13px;
+  color: #b45309;
+  position: relative;
+  padding-left: 14px;
+}
+
+/* Point des puces jaune foncé personnalisé */
+.steps-bullet-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #b45309;
+}
+
+/* Gros bouton de validation orange */
+.btn-back-home-submit {
+  display: block;
+  background-color: #cc5a27;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-back-home-submit:hover {
+  background-color: #b24d20;
+}
+
+/* Bouton d'aide flottant */
+.floating-help-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #efeae4;
+  font-weight: 600;
+  color: #8c827a;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .auth-visual-panel {
+    display: none;
+  }
+}

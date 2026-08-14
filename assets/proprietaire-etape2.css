@@ -1,0 +1,324 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.auth-split-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fbf9f6;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* PANNEAU VISUEL GAUCHE */
+.auth-visual-panel {
+  flex: 1;
+  position: relative;
+  background-image: url('https://unsplash.com');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 80px;
+  color: #ffffff;
+}
+
+.visual-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 34, 27, 0.88);
+  z-index: 1;
+}
+
+.panel-content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 70px;
+}
+
+.logo-icon-box {
+  background-color: #cc5a27;
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 20px;
+}
+
+.logo-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-main {
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+}
+
+.logo-sub {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: #bfaea6;
+  font-weight: 600;
+}
+
+.main-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.main-description {
+  font-size: 15px;
+  color: #d1c5bc;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.trust-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trust-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #eae3dd;
+}
+
+.trust-list i {
+  color: #cc5a27;
+  font-size: 16px;
+}
+
+/* PANNEAU FORMULAIRE DROIT */
+.auth-form-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #fbf9f6;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 440px;
+}
+
+.auth-tabs {
+  display: flex;
+  background-color: #efeae4;
+  padding: 6px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  text-decoration: none;
+  color: #8c827a;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.tab-item.active {
+  background-color: #ffffff;
+  color: #cc5a27;
+}
+
+.form-welcome-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.form-welcome-row h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1512;
+  line-height: 1.2;
+}
+
+.title-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-indicator {
+  font-size: 12px;
+  color: #8c827a;
+  margin-top: 4px;
+}
+
+.back-arrow-link {
+  color: #1a1512;
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 6px;
+}
+
+/* Barre de Progression */
+.progress-bar-container {
+  width: 100%;
+  height: 4px;
+  background-color: #efeae4;
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+.progress-line-active {
+  height: 100%;
+  background-color: #cc5a27;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.progress-line-active.step-2 {
+  width: 66.66%; /* Étape 2/3 */
+}
+
+.split-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-row-double {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-block label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a1512;
+}
+
+.input-block input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd7cf;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #1a1512;
+  outline: none;
+}
+
+.input-block input[readonly] {
+  background-color: #efeae4;
+  color: #8c827a;
+  cursor: not-allowed;
+}
+
+.select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd7cf;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #1a1512;
+  outline: none;
+  appearance: none;
+}
+
+.select-wrapper::after {
+  content: "\f107";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 14px;
+  color: #8c827a;
+  pointer-events: none;
+}
+
+/* Aligner les boutons Retour et Continuer sur la même ligne */
+.form-actions-navigation {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.btn-step-back {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #cc5a27;
+  color: #cc5a27;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-split-submit {
+  flex: 1;
+  background-color: #cc5a27;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.split-form-footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: #8c827a;
+}
+
+.split-form-footer a {
+  color: #cc5a27;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .auth-visual-panel {
+    display: none;
+  }
+}

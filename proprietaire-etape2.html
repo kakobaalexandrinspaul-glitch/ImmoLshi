@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription Propriétaire — Étape 2/3 — ImmoLshi</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/proprietaire-etape2.css">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://googleapis.com">
+  <!-- Bibliothèque d'icônes FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="auth-split-container">
+    
+    <!-- PANNEAU GAUCHE : VISUEL & ACCROCHE -->
+    <div class="auth-visual-panel">
+      <div class="visual-overlay"></div>
+      
+      <div class="panel-content">
+        <div class="brand-logo">
+          <div class="logo-icon-box">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <div class="logo-titles">
+            <span class="logo-main">ImmoLshi</span>
+            <span class="logo-sub">LUBUMBASHI</span>
+          </div>
+        </div>
+
+        <h1 class="main-headline">L'immobilier de confiance à Lubumbashi</h1>
+        <p class="main-description">
+          Rejoignez plus de 1 284 utilisateurs qui font confiance à ImmoLshi pour leurs transactions immobilières en toute sécurité.
+        </p>
+
+        <ul class="trust-list">
+          <li><i class="fa-regular fa-circle-check"></i> Annonces vérifiées par notre équipe</li>
+          <li><i class="fa-regular fa-circle-check"></i> Paiements 100% sécurisés sur la plateforme</li>
+          <li><i class="fa-regular fa-circle-check"></i> Contrats générés automatiquement</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PANNEAU DROIT : FORMULAIRE PROPRIÉTAIRE ÉTAPE 2 -->
+    <div class="auth-form-panel">
+      <div class="form-wrapper">
+        
+        <!-- Onglets Supérieurs -->
+        <div class="auth-tabs">
+          <a href="auth.html" class="tab-item">Connexion</a>
+          <a href="inscription.html" class="tab-item active">Inscription</a>
+        </div>
+
+        <!-- Titre, sous-titre et flèche retour -->
+        <div class="form-welcome-row">
+          <a href="proprietaire.html" class="back-arrow-link">
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+          <div class="title-meta">
+            <h2>Inscription Propriétaire</h2>
+            <span class="step-indicator">Étape 2 / 3</span>
+          </div>
+        </div>
+
+        <!-- Barre de Progression (Étape 2/3 remplie à 66%) -->
+        <div class="progress-bar-container">
+          <div class="progress-line-active step-2"></div>
+        </div>
+
+        <!-- Formulaire de saisie -->
+        <form action="proprietaire-etape3.html" method="POST" class="split-auth-form">
+          
+          <!-- Ligne double : Ville et Commune -->
+          <div class="form-row-double">
+            <div class="input-block">
+              <label for="city">Ville</label>
+              <input type="text" id="city" name="city" value="Lubumbashi" readonly>
+            </div>
+            <div class="input-block">
+              <label for="commune">Commune *</label>
+              <div class="select-wrapper">
+                <select id="commune" name="commune" required>
+                  <option value="" disabled selected>Sélectionner</option>
+                  <option value="Lubumbashi">Lubumbashi</option>
+                  <option value="Golf">Golf</option>
+                  <option value="Kamalondo">Kamalondo</option>
+                  <option value="Katuba">Katuba</option>
+                  <option value="Kenya">Kenya</option>
+                  <option value="Rwashi">Rwashi</option>
+                  <option value="Annexe">Annexe</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Champ : Quartier -->
+          <div class="input-block">
+            <label for="quartier">Quartier *</label>
+            <input type="text" id="quartier" name="quartier" placeholder="Quartier" required>
+          </div>
+
+          <!-- Champ : Avenue -->
+          <div class="input-block">
+            <label for="avenue">Avenue *</label>
+            <input type="text" id="avenue" name="avenue" placeholder="Avenue" required>
+          </div>
+
+          <!-- Champ : Numéro de parcelle -->
+          <div class="input-block">
+            <label for="parcelle">Numéro de parcelle *</label>
+            <input type="text" id="parcelle" name="parcelle" placeholder="Numéro de parcelle" required>
+          </div>
+
+          <!-- Boutons de navigation bas de formulaire -->
+          <div class="form-actions-navigation">
+            <a href="proprietaire.html" class="btn-step-back">← Retour</a>
+            <button type="submit" class="btn-split-submit">Continuer →</button>
+          </div>
+        </form>
+
+        <div class="split-form-footer">
+          <p>Déjà un compte ? <a href="auth.html">Se connecter</a></p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

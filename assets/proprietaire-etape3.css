@@ -1,0 +1,412 @@
+/* ==========================================================================
+   INTERFACES SPLIT-SCREEN AUTH — ÉTAPE 3 PROPRIÉTAIRE (Fidèle à l'image)
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.auth-split-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fbf9f6;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   BLOC VISUEL DE GAUCHE (Image de fond + Teinte foncée)
+   -------------------------------------------------------------------------- */
+.auth-visual-panel {
+  flex: 1;
+  position: relative;
+  background-image: url('https://unsplash.com');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 80px;
+  color: #ffffff;
+}
+
+.visual-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 34, 27, 0.88);
+  z-index: 1;
+}
+
+.panel-content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+}
+
+/* Style précis du Logo */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 70px;
+}
+
+.logo-icon-box {
+  background-color: #cc5a27;
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 20px;
+}
+
+.logo-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-main {
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+}
+
+.logo-sub {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: #bfaea6;
+  font-weight: 600;
+}
+
+/* Typographies de gauche */
+.main-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.main-description {
+  font-size: 15px;
+  color: #d1c5bc;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.trust-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trust-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #eae3dd;
+}
+
+.trust-list i {
+  color: #cc5a27;
+  font-size: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   BLOC FORMULAIRE DE DROITE
+   -------------------------------------------------------------------------- */
+.auth-form-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #fbf9f6;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 440px;
+}
+
+.auth-tabs {
+  display: flex;
+  background-color: #efeae4;
+  padding: 6px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  text-decoration: none;
+  color: #8c827a;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.tab-item.active {
+  background-color: #ffffff;
+  color: #cc5a27;
+}
+
+.form-welcome-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.form-welcome-row h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1512;
+  line-height: 1.2;
+}
+
+.title-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-indicator {
+  font-size: 12px;
+  color: #8c827a;
+  margin-top: 4px;
+}
+
+.back-arrow-link {
+  color: #1a1512;
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 6px;
+}
+
+/* Barre de Progression Allongée (Étape 3/3 remplie à 100%) */
+.progress-bar-container {
+  width: 100%;
+  height: 4px;
+  background-color: #efeae4;
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+.progress-line-active {
+  width: 100%;
+  height: 100%;
+  background-color: #cc5a27;
+  border-radius: 2px;
+}
+
+/* Encadré d'avertissement de sécurité gris */
+.security-info-note {
+  background-color: #f5f2eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.security-info-note p {
+  font-size: 13px;
+  color: #5c534c;
+  line-height: 1.5;
+}
+
+.split-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-block label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a1512;
+}
+
+/* Zone de téléversement de fichiers en pointillés (Dropzone) */
+.dropzone-file-wrapper {
+  position: relative;
+  width: 100%;
+  border: 1px dashed #ddd7cf;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.dropzone-file-wrapper input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.dropzone-file-wrapper:hover {
+  border-color: #cc5a27;
+  background-color: #fdf5f0;
+}
+
+.dropzone-icon {
+  font-size: 20px;
+  color: #8c827a;
+  margin-bottom: 8px;
+}
+
+.dropzone-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1512;
+}
+
+.dropzone-hint {
+  font-size: 11px;
+  color: #a69b92;
+  margin-top: 4px;
+}
+
+/* Case à cocher des conditions */
+.form-options-checkbox {
+  margin-top: 4px;
+}
+
+.custom-checkbox-layout {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox-layout input {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-checkmark {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  height: 16px;
+  width: 16px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.custom-checkbox-layout input:checked ~ .custom-checkmark {
+  background-color: #cc5a27;
+  border-color: #cc5a27;
+}
+
+.custom-checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox-layout input:checked ~ .custom-checkmark::after {
+  display: block;
+}
+
+.checkbox-text {
+  font-size: 13px;
+  color: #8c827a;
+  line-height: 1.4;
+}
+
+.accent-text {
+  color: #cc5a27;
+  font-weight: 500;
+}
+
+/* Aligner les boutons Retour et Soumettre sur la même ligne */
+.form-actions-navigation {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.btn-step-back {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #cc5a27;
+  color: #cc5a27;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-split-submit {
+  flex: 1;
+  background-color: #cc5a27;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-split-submit:hover {
+  background-color: #b24d20;
+}
+
+.split-form-footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: #8c827a;
+}
+
+.split-form-footer a {
+  color: #cc5a27;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .auth-visual-panel {
+    display: none;
+  }
+}

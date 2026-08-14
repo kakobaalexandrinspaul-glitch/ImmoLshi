@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historique des transactions — ImmoLshi</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/historique.css">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- BARRE DE NAVIGATION EN HAUT -->
+  <header class="dash-navbar">
+    <div class="nav-left-brand">
+      <div class="brand-logo">
+        <div class="logo-icon-box">
+          <i class="fa-solid fa-hotel"></i>
+        </div>
+        <div class="logo-titles">
+          <span class="logo-main">ImmoLshi</span>
+          <span class="logo-sub">LUBUMBASHI</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="nav-center-links">
+      <a href="index.html">Accueil</a>
+      <a href="annonces.html">Annonces</a>
+    </div>
+
+    <div class="nav-right-user">
+      <button class="icon-action-btn" aria-label="Mode sombre"><i class="fa-regular fa-moon"></i></button>
+      <button class="icon-action-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
+      <div class="user-profile-dropdown">
+        <div class="dropdown-trigger">
+          <img src="https://unsplash.com" alt="Eric" class="nav-avatar">
+          <span class="nav-username">Eric</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+      <button class="burger-menu-btn" aria-label="Menu mobile"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- DISPOSITION PRINCIPALE -->
+  <div class="main-dashboard-wrapper">
+    
+    <!-- MENU LATÉRAL GAUCHE (SIDEBAR) -->
+    <aside class="sidebar-panel">
+      <div class="sidebar-profile-card">
+        <img src="https://unsplash.com" alt="Eric Mukendi" class="profile-large-avatar">
+        <h3 class="profile-name">Eric Mukendi</h3>
+        <span class="profile-email">eric.mukendi@gmail.com</span>
+        <span class="status-badge">Client actif</span>
+      </div>
+
+      <nav class="sidebar-navigation">
+        <a href="dashboard.html" class="nav-item-link"><i class="fa-solid fa-table-cells-large"></i> Aperçu</a>
+        <a href="reservations.html" class="nav-item-link"><i class="fa-regular fa-calendar"></i> Réservations</a>
+        <a href="favoris.html" class="nav-item-link"><i class="fa-regular fa-heart"></i> Favoris</a>
+        <a href="contrats.html" class="nav-item-link"><i class="fa-regular fa-file-lines"></i> Contrats</a>
+        <a href="historique.html" class="nav-item-link active"><i class="fa-solid fa-clock-rotate-left"></i> Historique</a>
+      </nav>
+
+      <div class="sidebar-footer-action">
+        <a href="annonces.html" class="btn-search-property">Chercher un bien</a>
+      </div>
+    </aside>
+
+    <!-- ZONE DE CONTENU PRINCIPALE (PANNEAU DROIT) -->
+    <main class="content-display-panel">
+      
+      <div class="welcome-header">
+        <h1 class="page-main-title">Historique des transactions</h1>
+      </div>
+
+      <!-- Tableau des transactions -->
+      <div class="table-container">
+        <table class="transactions-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Bien</th>
+              <th>Montant</th>
+              <th>Moyen</th>
+              <th>Statut</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="date-cell">12/06/2026</td>
+              <td class="property-cell">Villa moderne avec piscine — Golf</td>
+              <td class="amount-cell">280,000 USD</td>
+              <td class="method-cell">Virement bancaire</td>
+              <td><span class="status-badge-pill pill-blue">Terminé</span></td>
+            </tr>
+            <tr>
+              <td class="date-cell">26/07/2026</td>
+              <td class="property-cell">Villa 4 chambres — Ruashi</td>
+              <td class="amount-cell">1,800 USD</td>
+              <td class="method-cell">M-Pesa</td>
+              <td><span class="status-badge-pill pill-yellow">En attente</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+  </div>
+
+  
+
+</body>
+</html>

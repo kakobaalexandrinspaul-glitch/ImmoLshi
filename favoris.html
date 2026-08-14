@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Favoris — ImmoLshi</title>
+  
+  <!-- Feuilles de style spécifiques -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/reservations.css">
+  <link rel="stylesheet" href="assets/favoris.css">
+  
+  <!-- Polices Google Fonts (Playfair pour les titres, Plus Jakarta Sans pour le texte) -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bibliothèque d'icônes FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<body>
+<!-- BARRE DE NAVIGATION EN HAUT -->
+  <header class="dash-navbar">
+    <div class="nav-left-brand">
+      <div class="brand-logo">
+        <div class="logo-icon-box">
+          <i class="fa-solid fa-hotel"></i>
+        </div>
+        <div class="logo-titles">
+          <span class="logo-main">ImmoLshi</span>
+          <span class="logo-sub">LUBUMBASHI</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="nav-center-links">
+      <a href="../index.html">Accueil</a>
+      <a href="annonces.html">Annonces</a>
+    </div>
+
+    <div class="nav-right-user">
+      <button class="icon-action-btn" aria-label="Mode sombre"><i class="fa-regular fa-moon"></i></button>
+      <button class="icon-action-btn" aria-label="Notifications">
+        <i class="fa-regular fa-bell"></i>
+      </button>
+      <div class="user-profile-dropdown">
+        <div class="dropdown-trigger">
+          <img src="https://unsplash.com" alt="Eric" class="nav-avatar">
+          <span class="nav-username">Eric</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+      <button class="burger-menu-btn" aria-label="Menu mobile"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- DISPOSITION PRINCIPALE -->
+  <div class="main-dashboard-wrapper">
+    
+    <!-- MENU LATÉRAL GAUCHE (SIDEBAR) -->
+    <aside class="sidebar-panel">
+      <div class="sidebar-profile-card">
+        <img src="https://unsplash.com" alt="Eric Mukendi" class="profile-large-avatar">
+        <h3 class="profile-name">Eric Mukendi</h3>
+        <span class="profile-email">eric.mukendi@gmail.com</span>
+        <span class="status-badge">Client actif</span>
+      </div>
+
+      <nav class="sidebar-navigation">
+        <a href="dashboard.html" class="nav-item-link"><i class="fa-solid fa-table-cells-large"></i> Aperçu</a>
+        <a href="reservations.html" class="nav-item-link"><i class="fa-regular fa-calendar"></i> Réservations</a>
+        <a href="favoris.html" class="nav-item-link active"><i class="fa-regular fa-heart"></i> Favoris</a>
+        <a href="contrats.html" class="nav-item-link"><i class="fa-regular fa-file-lines"></i> Contrats</a>
+        <a href="historique.html" class="nav-item-link"><i class="fa-solid fa-clock-rotate-left"></i> Historique</a>
+      </nav>
+
+      <div class="sidebar-footer-action">
+        <a href="annonces.html" class="btn-search-property">Chercher un bien</a>
+      </div>
+    </aside>
+
+    <!-- ZONE DE CONTENU PRINCIPALE (PANNEAU DROIT) -->
+    <main class="content-display-panel">
+      
+      <div class="welcome-header">
+        <h1 class="page-main-title">Mes favoris</h1>
+      </div>
+
+      <!-- Grille à 3 colonnes -->
+      <div class="favoris-cards-grid">
+        
+        <!-- CARTE 1 -->
+        <article class="property-favoris-card">
+          <div class="card-media-box">
+             <img src="assets/images/villa-moderne.jpg" alt="Villa moderne">
+          </div>
+          <div class="card-content-box">
+            <h3>Villa moderne avec piscine — Golf</h3>
+            <p class="location-tag"><i class="fa-solid fa-location-dot"></i> Golf</p>
+            <div class="card-bottom-row">
+              <span class="price-display">280,000 USD</span>
+              <a href="details.html" class="btn-view-property">Voir</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARTE 2 -->
+        <article class="property-favoris-card">
+          <div class="card-media-box">
+            <img src="assets/images/appartement-3-chambres.jpg" alt="Appartement 3 chambres">
+          </div>
+          <div class="card-content-box">
+            <h3>Appartement 3 chambres — Centre-ville</h3>
+            <p class="location-tag"><i class="fa-solid fa-location-dot"></i> Lubumbashi</p>
+            <div class="card-bottom-row">
+              <span class="price-display">1,200 <small>USD/mois</small></span>
+              <a href="details.html" class="btn-view-property">Voir</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARTE 3 -->
+        <article class="property-favoris-card">
+          <div class="card-media-box">
+          <img src="assets/images/studio-moderne.jpg" alt="Studio meublé">
+  
+          </div>
+          <div class="card-content-box">
+            <h3>Studio meublé — Kamalondo</h3>
+            <p class="location-tag"><i class="fa-solid fa-location-dot"></i> Kamalondo</p>
+            <div class="card-bottom-row">
+              <span class="price-display">350 <small>USD/mois</small></span>
+              <a href="details.html" class="btn-view-property">Voir</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </main>
+
+  </div>
+
+  <button class="floating-help-btn" aria-label="Aide">?</button>
+
+</body>
+</html>

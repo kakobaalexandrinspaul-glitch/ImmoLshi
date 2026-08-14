@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription Propriétaire — Étape 3/3 — ImmoLshi</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/proprietaire-etape3.css">
+  <link rel="stylesheet" href="assets/proprietaire-etape3.css">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="auth-split-container">
+    
+    <!-- PANNEAU GAUCHE : VISUEL & ACCROCHE -->
+    <div class="auth-visual-panel">
+      <div class="visual-overlay"></div>
+      
+      <div class="panel-content">
+        <div class="brand-logo">
+          <div class="logo-icon-box">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <div class="logo-titles">
+            <span class="logo-main">ImmoLshi</span>
+            <span class="logo-sub">LUBUMBASHI</span>
+          </div>
+        </div>
+
+        <h1 class="main-headline">L'immobilier de confiance à Lubumbashi</h1>
+        <p class="main-description">
+          Rejoignez plus de 1 284 utilisateurs qui font confiance à ImmoLshi pour leurs transactions immobilières en toute sécurité.
+        </p>
+
+        <ul class="trust-list">
+          <li><i class="fa-regular fa-circle-check"></i> Annonces vérifiées par notre équipe</li>
+          <li><i class="fa-regular fa-circle-check"></i> Paiements 100% sécurisés sur la plateforme</li>
+          <li><i class="fa-regular fa-circle-check"></i> Contrats générés automatiquement</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PANNEAU DROIT : FORMULAIRE PROPRIÉTAIRE ÉTAPE 3 -->
+    <div class="auth-form-panel">
+      <div class="form-wrapper">
+        
+        <!-- Onglets Supérieurs -->
+        <div class="auth-tabs">
+          <a href="auth.html" class="tab-item">Connexion</a>
+          <a href="inscription.html" class="tab-item active">Inscription</a>
+        </div>
+
+        <!-- Titre, sous-titre et flèche retour -->
+        <div class="form-welcome-row">
+          <a href="proprietaire-etape2.html" class="back-arrow-link">
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+          <div class="title-meta">
+            <h2>Inscription Propriétaire</h2>
+            <span class="step-indicator">Étape 3 / 3</span>
+          </div>
+        </div>
+
+        <!-- Barre de Progression (Étape 3/3 remplie à 100%) -->
+        <div class="progress-bar-container">
+          <div class="progress-line-active step-3"></div>
+        </div>
+
+        <!-- Encadré d'information et de sécurité -->
+        <div class="security-info-note">
+          <p>Pour garantir la sécurité de la plateforme, nous devons vérifier votre identité. Vos documents sont traités de manière confidentielle.</p>
+        </div>
+
+        <!-- Formulaire de soumission des pièces -->
+        <form action="dashboard.html" method="POST" class="split-auth-form" enctype="multipart/form-data">
+          
+          <!-- Zone 1 : Photo de profil -->
+          <div class="input-block">
+            <label>Photo de profil *</label>
+            <div class="dropzone-file-wrapper">
+              <input type="file" name="profile_photo" accept="image/jpeg, image/png" required>
+              <i class="fa-solid fa-cloud-arrow-up dropzone-icon"></i>
+              <span class="dropzone-text">Cliquer pour téléverser</span>
+              <span class="dropzone-hint">JPG, PNG — max 5 MB</span>
+            </div>
+          </div>
+
+          <!-- Zone 2 : Photo de la carte d'identité -->
+          <div class="input-block">
+            <label>Photo de la carte d'identité *</label>
+            <div class="dropzone-file-wrapper">
+              <input type="file" name="id_card_photo" accept="image/jpeg, image/png, application/pdf" required>
+              <i class="fa-solid fa-cloud-arrow-up dropzone-icon"></i>
+              <span class="dropzone-text">Cliquer pour téléverser</span>
+              <span class="dropzone-hint">Recto et verso — JPG, PDF</span>
+            </div>
+          </div>
+
+          <!-- Zone 3 : Selfie de vérification -->
+          <div class="input-block">
+            <label>Selfie de vérification *</label>
+            <div class="dropzone-file-wrapper">
+              <input type="file" name="selfie_photo" accept="image/jpeg, image/png" required>
+              <i class="fa-solid fa-cloud-arrow-up dropzone-icon"></i>
+              <span class="dropzone-text">Cliquer pour téléverser</span>
+              <span class="dropzone-hint">Tenez votre CI devant vous</span>
+            </div>
+          </div>
+
+          <!-- Case à cocher : CGU & Confidentialité -->
+          <div class="form-options-checkbox">
+            <label class="custom-checkbox-layout">
+              <input type="checkbox" name="terms" required>
+              <span class="custom-checkmark"></span>
+              <span class="checkbox-text">
+                J'accepte les <span class="accent-text">conditions d'utilisation</span> et la politique de confidentialité.
+              </span>
+            </label>
+          </div>
+
+          <!-- Boutons de navigation et soumission finale -->
+          <div class="form-actions-navigation">
+            <a href="proprietaire-etape2.html" class="btn-step-back">← Retour</a>
+            <button type="submit" class="btn-split-submit">Soumettre →</button>
+          </div>
+        </form>
+
+        <div class="split-form-footer">
+          <p>Déjà un compte ? <a href="auth.html">Se connecter</a></p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
