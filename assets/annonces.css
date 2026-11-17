@@ -263,3 +263,359 @@
         margin-bottom: 18px;
     }
 }
+/* ---------- Panneau de filtres avancés (CSS pur, via <details>) ---------- */
+.filters-details {
+  position: relative;
+}
+
+.filters-details summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.filters-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.btn-toggle-filters {
+  height: 44px;
+  padding: 0 20px;
+  background-color: var(--accent-orange);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.btn-toggle-filters:hover {
+  background-color: #b04e14;
+}
+
+.filters-details[open] summary.btn-toggle-filters {
+  background-color: #b04e14;
+}
+
+/* Le panneau s'affiche en overlay sous le bouton quand <details> est ouvert */
+.filter-form {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 20;
+  width: 640px;
+  max-width: 90vw;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.filter-group label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #666666;
+}
+
+.filter-group select,
+.filter-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d8d4cd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fafafa;
+  color: #1a1a1a;
+  outline: none;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+  border-color: var(--accent-orange);
+  background-color: #ffffff;
+}
+
+.btn-filter-submit {
+  background-color: var(--accent-orange);
+  color: #ffffff;
+  border: none;
+  padding: 11px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 41px;
+}
+
+.btn-filter-submit:hover {
+  background-color: #b04e14;
+}
+
+@media (max-width: 768px) {
+  .filter-form {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    margin-top: 12px;
+  }
+
+  .filter-group {
+    min-width: 100%;
+  }
+
+  .btn-filter-submit {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+
+/* ==========================================================================
+   HERO SECTION (page d'accueil)
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 5% 80px 5%;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.hero-bg-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 12, 0.75) 0%,
+    rgba(10, 10, 12, 0.55) 45%,
+    rgba(10, 10, 12, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+/* ---------- Badge de localisation ---------- */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border: 1px solid rgba(224, 178, 90, 0.4);
+  border-radius: 999px;
+  background-color: rgba(224, 178, 90, 0.08);
+  color: var(--accent-gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+/* ---------- Titre ---------- */
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.hero-highlight {
+  color: var(--accent-gold);
+}
+
+/* ---------- Sous-titre ---------- */
+.hero-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #d4d4d8;
+  max-width: 560px;
+  margin-bottom: 36px;
+}
+
+/* ---------- Barre de recherche ---------- */
+.hero-search-card {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 22px 24px;
+  background-color: rgba(20, 20, 24, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  margin-bottom: 24px;
+}
+
+.hero-search-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.hero-search-field label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #a1a1aa;
+}
+
+.hero-search-field input,
+.hero-search-field select {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+.hero-search-field input::placeholder {
+  color: #8a8a90;
+}
+
+.hero-search-field input:focus,
+.hero-search-field select:focus {
+  border-color: var(--accent-orange);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Les <option> héritent du rendu natif du navigateur (fond clair) — normal */
+.hero-search-field select option {
+  color: #1a1a1a;
+}
+
+.hero-search-btn {
+  height: 40px;
+  padding: 0 22px;
+  background-color: var(--accent-orange);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.hero-search-btn:hover {
+  background-color: #b04e14;
+}
+
+/* ---------- CTA du bas ---------- */
+.hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition, all 0.2s ease);
+}
+
+.hero-btn-primary:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+.hero-btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #d4d4d8;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-btn-link:hover {
+  color: #ffffff;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 100px 6% 60px 6%;
+    min-height: auto;
+  }
+
+  .hero-search-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-search-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .hero-btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+}

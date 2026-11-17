@@ -10,9 +10,13 @@
   <link rel="stylesheet" href="assets/annonces.css">
   <!-- FontAwesome pour les icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-<body>
-
+<body>   
   <!-- ==================== NAVBAR ==================== -->
   <header class="main-header">
     <nav class="navbar">
@@ -35,7 +39,7 @@
         <button class="theme-toggle" aria-label="Mode sombre">
           <i class="fa-regular fa-moon"></i>
         </button>
-        <a href="connexion.html" class="link-connexion">Connexion</a>
+        <a href="inscription.html" class="btn-inscription">Connexion</a>
         <a href="inscription.html" class="btn-inscription">S'inscrire</a>
         <button class="menu-burger" aria-label="Menu mobile">
           <span></span>
@@ -47,6 +51,7 @@
   </header>
 
   <!-- ==================== SEARCH & FILTERS SECTION ==================== -->
+
   <section class="search-filter-section">
     <div class="filter-container">
       <form class="filter-form">
@@ -57,6 +62,7 @@
             <option value="">Tout afficher</option>
             <option value="louer">Louer</option>
             <option value="acheter">Aacheter</option>
+            <option value="RECHERCHE">RECHERCHE</option>
           </select>
         </div>
 
@@ -97,6 +103,87 @@
         <button type="submit" class="btn-filter-submit">
           <i class="fa-solid fa-magnifying-glass"></i> Filtrer
         </button>
+
+        <!-- ==================== HERO SECTION ==================== -->
+<section class="hero-section">
+  <div class="hero-bg-image" style="background-image: url('assets/images/banners/hero-lubumbashi.jpg');"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <span class="hero-badge">
+      <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+      Lubumbashi · Katanga · RD Congo
+    </span>
+
+    <h1 class="hero-title">
+      L'immobilier de
+      <span class="hero-highlight">confiance</span>
+      à Lubumbashi
+    </h1>
+
+    <p class="hero-subtitle">
+      La première plateforme sécurisée de gestion immobilière en RDC.
+      Annonces vérifiées, paiements centralisés, contrats automatiques.
+    </p>
+
+    <form class="hero-search-card" action="pages/annonces.html" method="get">
+      <div class="hero-search-field">
+        <label for="hero-search">Recherche</label>
+        <input
+          type="search"
+          id="hero-search"
+          name="q"
+          placeholder="Villa, Studio, Terrain..."
+        >
+      </div>
+
+      <div class="hero-search-field">
+        <label for="hero-commune">Commune</label>
+        <select id="hero-commune" name="commune">
+          <option value="">Toutes</option>
+          <option value="lubumbashi">Lubumbashi (Centre-ville)</option>
+          <option value="golf">Golf</option>
+          <option value="kamalondo">Kamalondo</option>
+          <option value="kampemba">Kampemba</option>
+          <option value="katuba">Katuba</option>
+          <option value="kenya">Kenya</option>
+          <option value="ruashi">Ruashi</option>
+          <option value="annexe">Annexe</option>
+        </select>
+      </div>
+
+      <div class="hero-search-field">
+        <label for="hero-type">Type</label>
+        <select id="hero-type" name="type">
+          <option value="">Tous</option>
+          <option value="villa">Villa</option>
+          <option value="appartement">Appartement</option>
+          <option value="studio">Studio</option>
+          <option value="bureau">Bureau</option>
+          <option value="terrain">Terrain</option>
+          <option value="entrepot">Entrepôt</option>
+          <option value="magasin">Magasin</option>
+        </select>
+      </div>
+
+      <button type="submit" class="hero-search-btn">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        Chercher
+      </button>
+    </form>
+
+    <div class="hero-cta-row">
+      <a href="pages/publier.html" class="hero-btn-primary">
+        Publier un bien
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+      <a href="pages/annonces.html" class="hero-btn-link">
+        Voir les annonces
+        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</section>
       </form>
     </div>
   </section>
@@ -150,8 +237,8 @@
 
 <article class="property-card">
   <a href="details.html" class="card-link">
-    <div class="card-image-wrapper">
-      <img src="assets/images/parcelle-terre.jpg" alt="Parcelle à vendre">
+    <div class="ca/parcelle-terre.jpgrd-image-wrapper">
+      <img src="assets/images"le  alt="Parcelà vendre">
       <span class="badge badge-blue">Vente</span>
       <span class="badge badge-black badge-right">Parcelle</span>
     </div>

@@ -9,7 +9,11 @@
   <link rel="preconnect" href="https://googleapis.com">
   <link rel="preconnect" href="https://gstatic.com" crossorigin>
   <link href="https://googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+  rel="stylesheet">
 </head>
 <body>
 
@@ -28,7 +32,7 @@
       <ul class="nav-links">
   <li><a href="index.html" class="active">Accueil</a></li>
   <!-- Ce lien ramène à l'accueil et descend automatiquement aux annonces -->
-  <li><a href="index.html" class="active">Annonces</a></li>
+  <li><a href="annonces.html" class="active">Annonces</a></li>
 </ul>
 
 
@@ -39,10 +43,10 @@
   </button>
   
   <!-- Le lien pointe vers auth.html avec la bonne classe de navigation -->
-  <a href="auth.html" class="link-Connexion">Connexion</a>
+  <a href="inscription.html" class="btn-inscription">Connexion</a>
 
   <!-- Lien d'inscription -->
-  <a href="pages/inscription.html" class="btn-inscription">S'inscrire</a>
+  <a href="inscription.html" class="btn-inscription">S'inscrire</a>
   
   <!-- Menu burger mobile -->
   <button class="menu-burger" aria-label="Menu mobile">
@@ -63,10 +67,10 @@
         Propriétaire ? Publiez vos biens et atteignez des milliers de clients. Client ? Trouvez votre prochain logement en toute sécurité.
       </p>
       <div class="hero-buttons">
-        <a href="pages/inscription.html" class="btn-primary">
+        <a href="auth.html" class="btn-primary">
           Créer mon compte <i class="fa-solid fa-arrow-right"></i>
         </a>
-        <a href="pages/annonces.html" class="btn-secondary">Explorer les annonces</a>
+        <a href="annonces.html" class="btn-secondary">Explorer les annonces</a>
       </div>
     </div>
   </section>
@@ -124,7 +128,7 @@
         <span class="section-tagline">SÉLECTION DU MOMENT</span>
         <h2 class="section-title">Biens en vedette</h2>
       </div>
-      <a href="pages/annonces.html" class="btn-outline">
+      <a href="annonces.html" class="btn-outline">
         Voir toutes les annonces <i class="fa-solid fa-arrow-right"></i>
       </a>
     </div>
@@ -170,7 +174,7 @@
         </div>
         <div class="card-body">
           <h4>Studio meublé — Kamalondo</h4>
-          <p class="property-location"><i class="fa-solid fa-location-dot"></i> Bel-Air, Kamalondo</p>
+          <p class="property-location"><i class="fa-solid fa-location-dot"></i>Kamalondo</p>
           <div class="card-footer">
             <span class="property-price">350 USD<small>/mois</small></span>
             <span class="property-specs">1 ch · 45 m²</span>
@@ -180,32 +184,90 @@
     </div>
   </section>
 
-  <section class="how-it-works">
-    <span class="section-tagline">PROCESSUS</span>
-    <h2 class="section-title">Comment ça fonctionne ?</h2>
-    <div class="steps-grid">
+        <!-- ===== SECTION : POURQUOI IMMOLSHI ===== -->
+<section class="why"> <!-- Conteneur de la section : fond crème + espacement vertical -->
+  <div class="why__container"> <!-- Limite la largeur du contenu à 1232px et le centre -->
+
+    <header class="why__header"> <!-- En-tête : surtitre + titre, centrés -->
+      <p class="why__eyebrow">Pourquoi ImmoLshi</p> <!-- Surtitre orange en majuscules -->
+      <h2 class="why__title"> <!-- Titre principal de la section -->
+        Sécurité et transparence,<br /> <!-- Première ligne du titre, <br> force le retour à la ligne -->
+        enfin réunies <!-- Deuxième ligne du titre -->
+      </h2>
+    </header>
+
+    <div class="why__grid"> <!-- Grille qui contient les 4 cartes -->
+
+      <!-- Carte 1 : Paiements -->
+      <article class="why-card"> <!-- Une carte (balise article = contenu autonome) -->
+        <div class="why-card__icon why-card__icon--green"> <!-- Pastille d'icône à fond vert clair -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"> <!-- Icône bouclier (décorative, cachée aux lecteurs d'écran) -->
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /> <!-- Tracé du bouclier -->
+          </svg>
+        </div>
+        <h3 class="why-card__title">Paiements 100% sécurisés</h3> <!-- Titre de la carte -->
+        <p class="why-card__text"> <!-- Texte descriptif -->
+          Toutes les transactions passent exclusivement par la plateforme.
+          Aucun paiement direct entre propriétaire et client.
+        </p>
+      </article>
+
+      <!-- Carte 2 : Annonces -->
+      <article class="why-card"> <!-- Deuxième carte -->
+        <div class="why-card__icon why-card__icon--orange"> <!-- Pastille à fond orange clair -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"> <!-- Icône cercle coché -->
+            <path d="M21.8 10A10 10 0 1 1 17 3.3" /> <!-- Cercle ouvert -->
+            <path d="m9 11 3 3L22 4" /> <!-- Coche -->
+          </svg>
+        </div>
+        <h3 class="why-card__title">Annonces vérifiées</h3> <!-- Titre -->
+        <p class="why-card__text"> <!-- Description -->
+          Chaque annonce est contrôlée par notre équipe avant publication.
+          Propriétaires identifiés et validés.
+        </p>
+      </article>
+
+      <!-- Carte 3 : Transparence -->
+      <article class="why-card"> <!-- Troisième carte -->
+        <div class="why-card__icon why-card__icon--gold"> <!-- Pastille à fond doré clair -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"> <!-- Icône courbe de croissance -->
+            <path d="m22 7-8.5 8.5-5-5L2 17" /> <!-- Ligne montante -->
+            <path d="M16 7h6v6" /> <!-- Pointe de la flèche -->
+          </svg>
+        </div>
+        <h3 class="why-card__title">Transparence totale</h3> <!-- Titre -->
+        <p class="why-card__text"> <!-- Description -->
+          Suivi en temps réel de vos réservations, paiements et commissions.
+          Contrats et factures générés automatiquement.
+        </p>
+      </article>
+
+      <!-- Carte 4 : Support -->
+      <article class="why-card"> <!-- Quatrième carte -->
+        <div class="why-card__icon why-card__icon--green"> <!-- Pastille verte (même style que la carte 1) -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"> <!-- Icône utilisateurs -->
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <!-- Corps du 1er personnage -->
+            <circle cx="9" cy="7" r="4" /> <!-- Tête du 1er personnage -->
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <!-- Corps du 2e personnage -->
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" /> <!-- Tête du 2e personnage -->
+          </svg>
+        </div>
+        <h3 class="why-card__title">Support local</h3> <!-- Titre -->
+        <p class="why-card__text"> <!-- Description -->
+          Une équipe basée à Lubumbashi, disponible par téléphone, email et
+          messagerie interne pour vous accompagner.
+        </p>
+      </article>
+
+    </div> <!-- Fin de la grille -->
+  </div> <!-- Fin du conteneur -->
+</section> <!-- Fin de la section -->
       <div class="step-item">
         <div class="step-number step-orange">01</div>
-        <h4>Inscrivez-vous</h4>
+        <h3>Inscrivez-vous</h3>
         <p>Créez votre compte en quelques minutes — client ou propriétaire.</p>
       </div>
       <div class="step-item">
-        <div class="step-number step-green">02</div>
-        <h4>Trouvez un bien</h4>
-        <p>Parcourez les annonces vérifiées. Filtrez par commune, prix, type.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-number step-orange">03</div>
-        <h4>Réservez & payez</h4>
-        <p>Réservez en ligne. Paiement sécurisé via mobile money ou virement.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-number step-green">04</div>
-        <h4>Emménagez</h4>
-        <p>Contrat et reçu générés automatiquement. L'argent est versé au propriétaire.</p>
-      </div>
-    </div>
-  </section>
 
   <section class="testimonials-section">
     <span class="section-tagline">TÉMOIGNAGES</span>
@@ -241,8 +303,8 @@
         <div class="testimonial-user">
           <img src="assets/images/villa-moderne.jpg" alt="Patrick Kasongo" class="user-avatar">
           <div>
-            <h5>Patrick Kasongo</h5>
-            <span>Propriétaire — Golf, Kenya</span>
+            <h5>Emery Bashiji</h5>
+            <span>Propriétaire — Golf-Metéo1</span>
           </div>
         </div>
       </div>
@@ -266,62 +328,353 @@
       </div>
     </div>
   </section>
-
+<section class="hero-section">
+    <div class="hero-content">
+      <h1>Rejoignez ImmoLshi aujourd'hui</h1>
+      <p class="hero-subtitle">
+        Propriétaire ? Publiez vos biens et atteignez des milliers de clients. Client ? Trouvez votre prochain logement en toute sécurité.
+      </p>
+      <div class="hero-buttons">
+        <a href="auth.html" class="btn-primary">
+          Créer mon compte <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="annonces.html" class="btn-secondary">Explorer les annonces</a>
+      </div>
+    </div>
+  </section>
    <!-- ==================== FOOTER ==================== -->
-  <footer class="main-footer">
-    <div class="footer-top">
-      <div class="footer-brand-col">
-        <div class="footer-logo">
-          <div class="logo-box-light"><i class="fa-solid fa-building-user"></i></div>
-          <span>ImmoLshi</span>
+  <!-- =========================================================
+     FOOTER IMMOLSHI
+     Plateforme immobilière de Lubumbashi
+========================================================= -->
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- =====================================================
+             COLONNE 1 : IDENTITÉ IMMOLSHI
+        ====================================================== -->
+        <div class="footer-column footer-brand">
+
+            <!-- Logo / Nom de la plateforme -->
+            <a href="/" class="footer-logo" aria-label="Accueil ImmoLshi">
+
+                <span class="footer-logo-icon" aria-hidden="true">
+                    <!-- Icône bâtiment en SVG -->
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M5 20V7.5L12 4L19 7.5V20"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+
+                        <path
+                            d="M8 20V11H16V20"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+
+                        <path
+                            d="M10 14H11"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                        />
+
+                        <path
+                            d="M13 14H14"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                        />
+
+                        <path
+                            d="M10 17H11"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                        />
+
+                        <path
+                            d="M13 17H14"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </span>
+
+                <span>ImmoLshi</span>
+
+            </a>
+
+
+            <!-- Description -->
+            <p class="footer-description">
+                La plateforme immobilière de référence à
+                Lubumbashi, RD Congo.
+            </p>
+
+
+            <!-- Réseaux sociaux -->
+            <div class="footer-socials">
+
+                <a
+                    href="#"
+                    class="social-link"
+                    aria-label="Facebook"
+                    rel="noopener noreferrer"
+                >
+                    fb
+                </a>
+
+                <a
+                    href="#"
+                    class="social-link"
+                    aria-label="Twitter"
+                    rel="noopener noreferrer"
+                >
+                    tw
+                </a>
+
+                <a
+                    href="#"
+                    class="social-link"
+                    aria-label="Instagram"
+                    rel="noopener noreferrer"
+                >
+                    ig
+                </a>
+
+            </div>
+
         </div>
-        <p>La plateforme immobilière de référence à Lubumbashi, RD Congo.</p>
-        <div class="social-links">
-  <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
-  <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-</div>
-      </div>
 
-      <div class="footer-links-col">
-        <h4>NAVIGATION</h4>
-        <ul>
-          <li><a href="../index.html">Accueil</a></li>
-          <li><a href="annonces.html">Annonces</a></li>
-          <li><a href="apropos.html">À propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
 
-      <div class="footer-links-col">
-        <h4>SERVICES</h4>
-        <ul>
-          <li><a href="#">Vente immobilière</a></li>
-          <li><a href="#">Location</a></li>
-          <li><a href="#">Gestion locative</a></li>
-          <li><a href="#">Évaluation de bien</a></li>
-        </ul>
-      </div>
+        <!-- =====================================================
+             COLONNE 2 : NAVIGATION
+        ====================================================== -->
+        <nav class="footer-column" aria-label="Navigation secondaire">
 
-      <div class="footer-links-col">
-        <h4>CONTACT</h4>
-        <ul class="contact-info">
-          <li><i class="fa-solid fa-location-dot"></i> Avenue Kasumbalesa, Kamalondo,<br>Lubumbashi, RDC</li>
-          <li><i class="fa-solid fa-phone"></i> +243 975 000 100</li>
-          <li><i class="fa-solid fa-envelope"></i> info@immo-lshi.cd</li>
-        </ul>
-      </div>
+            <h2 class="footer-title">
+                Navigation
+            </h2>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="/">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="annonces.html">
+                        Annonces
+                    </a>
+                </li>
+
+                <li>
+                    <a href="apropos.html">
+                        À propos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- =====================================================
+             COLONNE 3 : SERVICES
+        ====================================================== -->
+        <div class="footer-column">
+
+            <h2 class="footer-title">
+                Services
+            </h2>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="annonces.html?type=vente">
+                        Vente immobilière
+                    </a>
+                </li>
+
+                <li>
+                    <a href="annonces.html?type=location">
+                        Location
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gestion-locative.html">
+                        Gestion locative
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/pages/evaluation.html">
+                        Évaluation de bien
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- =====================================================
+             COLONNE 4 : CONTACT
+        ====================================================== -->
+        <address class="footer-column footer-contact">
+
+            <h2 class="footer-title">
+                Contact
+            </h2>
+
+
+            <!-- Adresse -->
+            <div class="contact-item">
+
+                <span class="contact-icon" aria-hidden="true">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M20 10C20 15 12 21 12 21C12 21 4 15 4 10C4 5.58 7.58 2 12 2C16.42 2 20 5.58 20 10Z"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        />
+
+                        <circle
+                            cx="12"
+                            cy="10"
+                            r="2.5"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        />
+                    </svg>
+                </span>
+
+                <span>
+                    Avenue Kasumbalesa, Kamalondo,<br>
+                    Lubumbashi, RDC
+                </span>
+
+            </div>
+
+
+            <!-- Téléphone -->
+            <div class="contact-item">
+
+                <span class="contact-icon" aria-hidden="true">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M6.6 2H4C2.9 2 2 2.9 2 4C2 13.94 10.06 22 20 22C21.1 22 22 21.1 22 20V17.4C22 16.72 21.54 16.12 20.88 15.94L16.96 14.86C16.34 14.69 15.68 14.92 15.31 15.44L13.86 17.47C10.7 16.03 7.97 13.3 6.53 10.14L8.56 8.69C9.08 8.32 9.31 7.66 9.14 7.04L8.06 3.12C7.88 2.46 7.28 2 6.6 2Z"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </span>
+
+                <a href="tel:+243975000100">
+                    +243 975 000 100
+                </a>
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="contact-item">
+
+                <span class="contact-icon" aria-hidden="true">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <rect
+                            x="3"
+                            y="5"
+                            width="18"
+                            height="14"
+                            rx="2"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        />
+
+                        <path
+                            d="M3 7L12 13L21 7"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </span>
+
+                <a href="mailto:info@immo-lshi.cd">
+                    info@immo-lshi.cd
+                </a>
+
+            </div>
+
+        </address>
+
     </div>
 
+
+    <!-- =========================================================
+         BAS DU FOOTER
+    ========================================================== -->
     <div class="footer-bottom">
-      <p>&copy; 2026 ImmoLshi. Tous droits réservés.</p>
-      <div class="footer-bottom-links">
-        <a href="#">Confidentialité</a>
-        <a href="#">Conditions d'utilisation</a>
-        <a href="#">Mentions légales</a>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
 
+        <p class="copyright">
+            © 2026 ImmoLshi. Tous droits réservés.
+        </p>
+
+
+        <nav
+            class="legal-links"
+            aria-label="Informations légales"
+        >
+
+            <a href="/pages/confidentialite.html">
+                Confidentialité
+            </a>
+
+            <a href="/pages/conditions.html">
+                Conditions d'utilisation
+            </a>
+
+            <a href="/pages/mentions-legales.html">
+                Mentions légales
+            </a>
+
+        </nav>
+
+    </div>
+
+</footer>

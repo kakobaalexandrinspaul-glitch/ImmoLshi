@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImmoLshi - Toutes les annonces</title>
+    <!-- Importation de Font Awesome pour des icônes exactes et modernes -->
+     <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/visiblity.css">
+    <link rel="stylesheet" href="annonces.html">
+</head>
+<body>
+
+<body>
+ <!-- BARRE SUPÉRIEURE -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo-container">
+        <div class="logo-badge">Immo<br>Lshi</div>
+        <div class="logo-text">
+          <h1>ImmoLshi</h1>
+          <p>Lubumbashi</p>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#">Accueil</a>
+        <a href="#">Annonces</a>
+      </nav>
+    </div>
+
+    <div class="nav-right">
+      <!-- Icône Thème (Lune alternative) -->
+      <button class="icon-btn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+      </button>
+      <!-- Icône Notification -->
+      <button class="icon-btn" style="position: relative;">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+        <span style="position: absolute; top: 4px; right: 4px; width: 6px; height: 6px; background-color: #D9383A; border-radius: 50%;"></span>
+      </button>
+      <!-- Profil Utilisateur Droite -->
+      <div class="user-profile-menu">
+        <img src="https://unsplash.com" alt="Jean-Pierre" class="avatar-sm">
+        <span class="profile-name">Jean-Pierre</span>
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-container">
+    
+    <!-- BARRE LATÉRALE GAUCHE -->
+    <aside class="sidebar">
+      <div class="sidebar-top-group">
+        <!-- Carte d'identité rapide -->
+        <div class="sidebar-profile">
+          <img src="https://unsplash.com" alt="Avatar principal" class="avatar-md">
+          <div>
+            <h4>Jean-Pierre Ilunga</h4>
+            <p>Administrateur système</p>
+          </div>
+        </div>
+
+        <!-- Tag Accès -->
+        <div class="admin-badge-container">
+          <div class="admin-badge">
+            <span class="badge-dot"></span> Accès administrateur
+          </div>
+        </div>
+
+        <!-- Menu Navigation principal -->
+        <nav class="sidebar-menu">
+          <a href="#" class="menu-item active">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+              <span>Vue globale</span>
+            </div>
+          </a>
+          <a href="users.html" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+              <span>Utilisateurs</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+              <span>Annonces</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>En attente</span>
+            </div>
+            <span class="nav-notif-badge">1</span>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+              <span>Paiements</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10a2 2 0 01-2 2h-2a2 2 0 01-2-2zm9 0v-4a2 2 0 00-2-2h-2a2 2 0 00-2 2v4a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
+              <span>Statistiques</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Journal d'activité</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+              
+              <span>Paramètres</span>
+            </div>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="#" class="menu-item">
+          <div class="menu-item-left">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+            <span>Envoyer une notification</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+
+    <main class="dashboard-container">
+        <!-- Barre supérieure : Titre et Recherche -->
+        <header class="dashboard-header">
+            <h1 class="main-title">Toutes les annonces</h1>
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Rechercher..." aria-label="Rechercher une annonce">
+            </div>
+        </header>
+
+        <!-- Tableau des annonces -->
+        <div class="table-responsive">
+            <table class="annonces-table">
+                <thead>
+                    <tr>
+                        <th>Bien</th>
+                        <th>Type</th>
+                        <th>Prix</th>
+                        <th>Propriétaire</th>
+                        <th>Vues</th>
+                        <th>Statut</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ligne 1 -->
+                    <tr>
+                        <td>
+                            <div class="property-cell">
+                                <img src="assets/images/studio-moderne.jpg" alt="Studio meublé" class="property-thumb">
+                                
+                                <div>
+                                    <div class="property-title">Villa moderne avec piscin...</div>
+                                    <div class="property-location">Kenya</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="badge badge-vente">Vente</span></td>
+                        <td class="price-text">280 000 USD</td>
+                        <td>Kasongo Mutombo</td>
+                        <td>342</td>
+                        <td><span class="status status-publiee">Publiée</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-action btn-view" title="Voir"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-action btn-delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Ligne 2 -->
+                    <tr>
+                        <td>
+                            <div class="property-cell">
+                                <img src="assets/images/appartement-3-chambres.jpg" alt="Appartement 3 chambres" class="property-thumb">
+                                <div>
+                                    <div class="property-title">Appartement 3 chambres ...</div>
+                                    <div class="property-location">Lubumbashi</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="badge badge-location">Location</span></td>
+                        <td class="price-text">1 200 USD</td>
+                        <td>Muteba Nkulu</td>
+                        <td>218</td>
+                        <td><span class="status status-publiee">Publiée</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-action btn-view" title="Voir"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-action btn-delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Ligne 3 -->
+                    <tr>
+                        <td>
+                            <div class="property-cell">
+                                <img src="assets/images/appartement-3-chambres.jpg"" alt="Studio meublé" class="property-thumb">
+                                <div>
+                                    <div class="property-title">Studio meublé — Kamalo...</div>
+                                    <div class="property-location">Kamalondo</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="badge badge-location">Location</span></td>
+                        <td class="price-text">350 USD</td>
+                        <td>Kasongo Mutombo</td>
+                        <td>87</td>
+                        <td><span class="status status-publiee">Publiée</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-action btn-view" title="Voir"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-action btn-delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Ligne 4 -->
+                    <tr>
+                        <td>
+                            <div class="property-cell">
+                                <img src="assets/images/appartement-3-chambres.jpg" alt="Bureau commercial" class="property-thumb">
+                                <div>
+                                    <div class="property-title">Bureau commercial — Pla...</div>
+                                    <div class="property-location">Kamalondo</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="badge badge-location">Location</span></td>
+                        <td class="price-text">2 500 USD</td>
+                        <td>Muteba Nkulu</td>
+                        <td>156</td>
+                        <td><span class="status status-publiee">Publiée</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-action btn-view" title="Voir"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-action btn-delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Ligne 5 -->
+                    <tr>
+                        <td>
+                            <div class="property-cell">
+                                <img src="assets/images/parcelle-terre.jpg" alt="Parcelle à vendre" class="property-thumb">
+                                <div>
+                                    <div class="property-title">Terrain 1000 m² — Kampe...</div>
+                                    <div class="property-location">Kampemba</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="badge badge-vente">Vente</span></td>
+                        <td class="price-text">45 000 USD</td>
+                        <td>Kasongo Mutombo</td>
+                        <td>203</td>
+                        <td><span class="status status-publiee">Publiée</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-action btn-view" title="Voir"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-action btn-delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Ligne 6 -->
+                    <tr>
+                        <td>
+                            <div class="property-cell">
+                                <img src="assets/images/studio-moderne.jpg" alt="Studio meublé" alt="Villa 4 chambres" class="property-thumb">
+                                <div>
+                                    <div class="property-title">Villa 4 chambres — Ruashi</div>
+                                    <div class="property-location">Ruashi</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="badge badge-location">Location</span></td>
+                        <td class="price-text">1 800 USD</td>
+                        <td>Muteba Nkulu</td>
+                        <td>289</td>
+                        <td><span class="status status-publiee">Publiée</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-action btn-view" title="Voir"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-action btn-delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Ligne 7 (En attente) -->
+                    <tr>
+                        <td>
+                            <div class="property-cell">
+                                <img src="assets/images/studio-moderne.jpg" alt="Studio meublé" class="property-thumb">
+                                <div>
+                                    <div class="property-title">Magasin commercial — K...</div>
+                                    <div class="property-location">Annexe</div>
+                                    </td>
+                        <td><span class="badge badge-location">Location</span></td>
+                        <td class="price-text">1 400 USD</td>
+                        <td>Johnson Kol</td>
+                        <td>29</td>
+                        <td><span class="status status-publiee">Publiée</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-action btn-view" title="Voir"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-action btn-delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+  </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>

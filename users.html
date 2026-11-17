@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des utilisateurs</title>
+    <!-- Chargement de la police Inter et des icônes Font Awesome -->
+
+  <link rel="stylesheet" href="assets/users.css">
+  <link rel="stylesheet" href="assets/dashboard-admin.css">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+</head>
+<body>
+ <!-- BARRE SUPÉRIEURE -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo-container">
+        <div class="logo-badge">Immo<br>Lshi</div>
+        <div class="logo-text">
+          <h1>ImmoLshi</h1>
+          <p>Lubumbashi</p>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#">Accueil</a>
+        <a href="#">Annonces</a>
+      </nav>
+    </div>
+
+    <div class="nav-right">
+      <!-- Icône Thème (Lune alternative) -->
+      <button class="icon-btn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+      </button>
+      <!-- Icône Notification -->
+      <button class="icon-btn" style="position: relative;">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+        <span style="position: absolute; top: 4px; right: 4px; width: 6px; height: 6px; background-color: #D9383A; border-radius: 50%;"></span>
+      </button>
+      <!-- Profil Utilisateur Droite -->
+      <div class="user-profile-menu">
+        <img src="https://unsplash.com" alt="Jean-Pierre" class="avatar-sm">
+        <span class="profile-name">Jean-Pierre</span>
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-container">
+    
+    <!-- BARRE LATÉRALE GAUCHE -->
+    <aside class="sidebar">
+      <div class="sidebar-top-group">
+        <!-- Carte d'identité rapide -->
+        <div class="sidebar-profile">
+          <img src="https://unsplash.com" alt="Avatar principal" class="avatar-md">
+          <div>
+            <h4>Jean-Pierre Ilunga</h4>
+            <p>Administrateur système</p>
+          </div>
+        </div>
+
+        <!-- Tag Accès -->
+        <div class="admin-badge-container">
+          <div class="admin-badge">
+            <span class="badge-dot"></span> Accès administrateur
+          </div>
+        </div>
+
+        <!-- Menu Navigation principal -->
+        <nav class="sidebar-menu">
+          <a href="#" class="menu-item active">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+              <span>Vue globale</span>
+            </div>
+          </a>
+          <a href="users.html" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+              <span>Utilisateurs</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+              <span>Annonces</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>En attente</span>
+            </div>
+            <span class="nav-notif-badge">1</span>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+              <span>Paiements</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10a2 2 0 01-2 2h-2a2 2 0 01-2-2zm9 0v-4a2 2 0 00-2-2h-2a2 2 0 00-2 2v4a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
+              <span>Statistiques</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Journal d'activité</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+              
+              <span>Paramètres</span>
+            </div>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="#" class="menu-item">
+          <div class="menu-item-left">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+            <span>Envoyer une notification</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- EN-TÊTE PRINCIPAL & CONTENU CORPS -->
+    <main class="main-content">
+      
+      <div class="header-title">
+        <h2>Tableau de bord administrateur</h2>
+        <p>Vue globale de la plateforme ImmoLshi · lundi 17 août 2026</p>
+      </div>
+
+            
+    <main class="container">
+        <!-- En-tête de la section -->
+        <header class="page-header">
+            <h1 class="page-title">Gestion des utilisateurs</h1>
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="search" placeholder="Rechercher..." aria-label="Rechercher des utilisateurs">
+            </div>
+        </header>
+
+        <!-- Conteneur de la table avec défilement responsive -->
+        <div class="table-responsive">
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Utilisateur</th>
+                        <th>Rôle</th>
+                        <th>Commune</th>
+                        <th>Inscrit le</th>
+                        <th>Statut</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ligne 1 -->
+                    <tr>
+                        <td data-label="Utilisateur">
+                            <div class="user-profile">
+                                <img src="https://placeholder.com" alt="Patrick Kasongo" class="avatar">
+                                <div class="user-info">
+                                    <span class="user-name">Patrick Kasongo</span>
+                                    <span class="user-email">kasongo.patrick@gmail.com</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-label="Rôle"><span class="badge badge-owner">Propriétaire</span></td>
+                        <td data-label="Commune">Kenya</td>
+                        <td data-label="Inscrit le">14/03/2025</td>
+                        <td data-label="Statut"><span class="status status-active">Actif</span></td>
+                        <td data-label="Actions" class="text-center">
+                            <div class="action-buttons">
+                                <button class="btn-action btn-view" title="Voir"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-action btn-edit" title="Modifier le rôle"><i class="fa-solid fa-user-gear"></i></button>
+                                <button class="btn-action btn-delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Ligne 2 -->
+                    <tr>
+                        <td data-label="Utilisateur">
+                            <div class="user-profile">
+                                <img src="https://placeholder.com" alt="Christophe Muteba" class="avatar">
+                                <div class="user-info">
+                                    <span class="user-name">Christophe Muteba</span>
+                                    <span class="user-email">muteba.chris@yahoo.fr</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-label="Rôle"><span class="badge badge-owner">Propriétaire</span></td>
+                        <td data-label="Commune">Kamalondo</td>
+                        <td data-label="Inscrit le">02/05/2025</td>
+                        <td data-label="Statut"><span class="status status-active">Actif</span></td>
+                        <td data-label="Actions" class="text-center">
+                            <div class="action-buttons">
+                                <button class="btn-action btn-view" title="Voir"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-action btn-edit" title="Modifier le rôle"><i class="fa-solid fa-user-gear"></i></button>
+                                <button class="btn-action btn-delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Ligne 3 -->
+                    <tr>
+                        <td data-label="Utilisateur">
+                            <div class="user-profile">
+                                <img src="https://placeholder.com" alt="Marie Kabila" class="avatar">
+                                <div class="user-info">
+                                    <span class="user-name">Marie Kabila</span>
+                                    <span class="user-email">marie.kabila@hotmail.com</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-label="Rôle"><span class="badge badge-owner">Propriétaire</span></td>
+                        <td data-label="Commune">Kampemba</td>
+                        <td data-label="Inscrit le">24/07/2026</td>
+                        <td data-label="Statut"><span class="status status-pending">En attente</span></td>
+                        <td data-label="Actions" class="text-center">
+                            <div class="action-buttons">
+                                <button class="btn-action btn-view" title="Voir"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-action btn-edit btn-highlight" title="Traiter la demande"><i class="fa-solid fa-user-check"></i></button>
+                                <button class="btn-action btn-delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Ligne 4 -->
+                    <tr>
+                        <td data-label="Utilisateur">
+                            <div class="user-profile">
+                                <img src="https://placeholder.com" alt="Eric Mukendi" class="avatar">
+                                <div class="user-info">
+                                    <span class="user-name">Eric Mukendi</span>
+                                    <span class="user-email">eric.mukendi@gmail.com</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-label="Rôle"><span class="badge badge-client">Client</span></td>
+                        <td data-label="Commune">Lubumbashi</td>
+                        <td data-label="Inscrit le">18/09/2025</td>
+                        <td data-label="Statut"><span class="status status-active">Actif</span></td>
+                        <td data-label="Actions" class="text-center">
+                            <div class="action-buttons">
+                                <button class="btn-action btn-view" title="Voir"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-action btn-edit" title="Modifier le rôle"><i class="fa-solid fa-user-gear"></i></button>
+                                <button class="btn-action btn-delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Ligne 5 -->
+                    <tr>
+                        <td data-label="Utilisateur">
+                            <div class="user-profile">
+                                <img src="https://placeholder.com" alt="Yvonne Ngoy" class="avatar">
+                                <div class="user-info">
+                                    <span class="user-name">Yvonne Ngoy</span>
+                                    <span class="user-email">yvonne.ngoy@orange.cd</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-label="Rôle"><span class="badge badge-client">Client</span></td>
+                        <td data-label="Commune">Katuba</td>
+                        <td data-label="Inscrit le">07/01/2026</td>
+                        <td data-label="Statut"><span class="status status-active">Actif</span></td>
+                        <td data-label="Actions" class="text-center">
+                            <div class="action-buttons">
+                                <button class="btn-action btn-view" title="Voir"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-action btn-edit" title="Modifier le rôle"><i class="fa-solid fa-user-gear"></i></button>
+                                <button class="btn-action btn-delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>

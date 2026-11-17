@@ -40,6 +40,129 @@ a {
   text-decoration: none;
 }
 
+
+/* ===== SECTION : POURQUOI IMMOLSHI ===== */
+
+.why { /* Section complète */
+  background: var(--color-bg); /* Fond crème */
+  padding: 80px 24px; /* Espace vertical 80px, marge latérale 24px (mobile) */
+}
+
+.why__container { /* Conteneur centré */
+  max-width: 1232px; /* Largeur maximale de la maquette */
+  margin: 0 auto; /* Centre horizontalement */
+}
+
+.why__header { /* En-tête de section */
+  text-align: center; /* Centre le texte */
+  margin-bottom: 56px; /* Espace entre le titre et les cartes */
+}
+
+.why__eyebrow { /* Surtitre « POURQUOI IMMOLSHI » */
+  margin: 0 0 16px; /* Espace sous le surtitre */
+  font-family: var(--font-sans); /* Police sans-serif */
+  font-size: 12px; /* Petite taille */
+  font-weight: 700; /* Gras */
+  letter-spacing: 0.12em; /* Espacement des lettres */
+  text-transform: uppercase; /* Force les majuscules */
+  color: var(--color-accent); /* Orange */
+}
+
+.why__title { /* Titre principal */
+  margin: 0; /* Supprime la marge par défaut */
+  font-family: var(--font-serif); /* Police serif */
+  font-size: 40px; /* Taille du titre */
+  font-weight: 700; /* Gras */
+  line-height: 1.25; /* Interligne */
+  color: var(--color-title); /* Presque noir */
+}
+
+.why__grid { /* Grille des cartes */
+  display: grid; /* Active CSS Grid */
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+  gap: 24px; /* Espace entre les cartes */
+}
+
+.why-card { /* Une carte */
+  background: var(--color-card); /* Fond blanc */
+  border: 1px solid var(--color-border); /* Bordure fine beige */
+  border-radius: 14px; /* Coins arrondis */
+  padding: 28px; /* Espace intérieur */
+}
+
+.why-card__icon { /* Pastille de l'icône */
+  display: flex; /* Pour centrer l'icône */
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  width: 48px; /* Largeur de la pastille */
+  height: 48px; /* Hauteur de la pastille */
+  margin-bottom: 20px; /* Espace sous la pastille */
+  border-radius: 12px; /* Coins arrondis */
+}
+
+.why-card__icon svg { /* Le dessin de l'icône */
+  width: 22px; /* Largeur de l'icône */
+  height: 22px; /* Hauteur de l'icône */
+  fill: none; /* Pas de remplissage */
+  stroke: currentColor; /* Le trait prend la couleur du texte (définie par la variante) */
+  stroke-width: 1.8; /* Épaisseur du trait */
+  stroke-linecap: round; /* Extrémités arrondies */
+  stroke-linejoin: round; /* Angles arrondis */
+}
+
+.why-card__icon--green { /* Variante verte */
+  background: var(--color-green-soft); /* Fond vert clair */
+  color: var(--color-green); /* Icône vert foncé */
+}
+
+.why-card__icon--orange { /* Variante orange */
+  background: var(--color-orange-soft); /* Fond orange clair */
+  color: var(--color-accent); /* Icône orange */
+}
+
+.why-card__icon--gold { /* Variante dorée */
+  background: var(--color-gold-soft); /* Fond doré clair */
+  color: var(--color-gold); /* Icône dorée */
+}
+
+.why-card__title { /* Titre de la carte */
+  margin: 0 0 10px; /* Espace sous le titre */
+  font-family: var(--font-serif); /* Police serif */
+  font-size: 17px; /* Taille du titre */
+  font-weight: 700; /* Gras */
+  color: var(--color-title); /* Presque noir */
+}
+
+.why-card__text { /* Description */
+  margin: 0; /* Supprime la marge par défaut */
+  font-family: var(--font-sans); /* Police sans-serif */
+  font-size: 14px; /* Taille du texte */
+  line-height: 1.65; /* Interligne aéré */
+  color: var(--color-text); /* Gris */
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) { /* Tablette */
+  .why__grid { grid-template-columns: repeat(2, 1fr); } /* 2 colonnes */
+}
+
+@media (max-width: 640px) { /* Mobile */
+  .why { padding: 56px 16px; } /* Réduit les espaces */
+  .why__title { font-size: 30px; } /* Titre plus petit */
+  .why__grid { grid-template-columns: 1fr; } /* 1 colonne */
+}
+
+
+
+
+
+
+
+
+
+
+
 button {
   border: none;
   background: none;
@@ -347,11 +470,27 @@ section {
 
 .featured-properties .section-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  text-align: center;
+  gap: 0.5rem;
   margin-bottom: 2rem;
+
 }
+
+/* Conteneur : centré, largeur limitée, espacement vertical */
+.how-it-works {
+  box-sizing: border-box;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.how-it-works__header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
 
 .properties-grid {
   display: grid;
@@ -658,4 +797,466 @@ section {
 /* Classe active qui sera ajoutée en JavaScript pour afficher le menu */
 .toggle-menu.show {
   display: block;
+}
+/* =========================================================
+   FOOTER IMMOLSHI
+   Style inspiré de la maquette fournie
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --footer-background: #191210;
+    --footer-text: #d5cdca;
+    --footer-title: #ffffff;
+    --footer-muted: #a9a09c;
+    --footer-border: rgba(255, 255, 255, 0.12);
+
+    --immolshi-orange: #d7671d;
+    --immolshi-orange-hover: #ed7626;
+
+    --social-background: #302925;
+    --social-hover: #413630;
+
+    --container-width: 1280px;
+}
+
+
+/* =========================================================
+   RESET LOCAL DU FOOTER
+========================================================= */
+
+.site-footer,
+.site-footer *,
+.site-footer *::before,
+.site-footer *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOOTER PRINCIPAL
+========================================================= */
+
+.site-footer {
+    width: 100%;
+    background: var(--footer-background);
+    color: var(--footer-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   CONTENEUR PRINCIPAL
+========================================================= */
+
+.footer-container {
+    width: min(100% - 48px, var(--container-width));
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr
+        1.15fr;
+
+    gap: 70px;
+
+    padding: 58px 0 62px;
+}
+
+
+/* =========================================================
+   COLONNES
+========================================================= */
+
+.footer-column {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   LOGO IMMOLSHI
+========================================================= */
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    color: var(--footer-title);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   ICÔNE DU LOGO
+========================================================= */
+
+.footer-logo-icon {
+    width: 32px;
+    height: 32px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--immolshi-orange);
+    color: #ffffff;
+
+    border-radius: 7px;
+
+    flex-shrink: 0;
+}
+
+
+.footer-logo-icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.footer-description {
+    max-width: 290px;
+
+    margin: 17px 0 21px;
+
+    color: var(--footer-text);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RÉSEAUX SOCIAUX
+========================================================= */
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.social-link {
+    width: 36px;
+    height: 36px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: var(--social-background);
+    color: var(--footer-text);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+
+.social-link:hover,
+.social-link:focus-visible {
+    background: var(--immolshi-orange);
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TITRES DES COLONNES
+========================================================= */
+
+.footer-title {
+    margin: 2px 0 20px;
+
+    color: var(--footer-title);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   LISTES DE LIENS
+========================================================= */
+
+.footer-links {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+
+.footer-links a {
+    color: var(--footer-text);
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition:
+        color 180ms ease,
+        padding-left 180ms ease;
+}
+
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    color: var(--immolshi-orange-hover);
+    padding-left: 3px;
+}
+
+
+/* =========================================================
+   BLOC CONTACT
+========================================================= */
+
+.footer-contact {
+    font-style: normal;
+}
+
+
+/* =========================================================
+   ÉLÉMENTS DE CONTACT
+========================================================= */
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin-bottom: 17px;
+
+    color: var(--footer-text);
+
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   ICÔNES CONTACT
+========================================================= */
+
+.contact-icon {
+    width: 17px;
+    height: 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    margin-top: 2px;
+
+    color: var(--immolshi-orange);
+}
+
+
+.contact-icon svg {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* =========================================================
+   LIENS CONTACT
+========================================================= */
+
+.contact-item a {
+    color: var(--footer-text);
+
+    text-decoration: none;
+
+    transition: color 180ms ease;
+}
+
+
+.contact-item a:hover,
+.contact-item a:focus-visible {
+    color: var(--immolshi-orange-hover);
+}
+
+
+/* =========================================================
+   PARTIE INFÉRIEURE DU FOOTER
+========================================================= */
+
+.footer-bottom {
+    width: min(100% - 48px, var(--container-width));
+    margin: 0 auto;
+
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-top: 1px solid var(--footer-border);
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.copyright {
+    margin: 0;
+
+    color: var(--footer-text);
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   LIENS LÉGAUX
+========================================================= */
+
+.legal-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 28px;
+}
+
+
+.legal-links a {
+    color: var(--footer-muted);
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: color 180ms ease;
+}
+
+
+.legal-links a:hover,
+.legal-links a:focus-visible {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+========================================================= */
+
+.footer-links a:focus-visible,
+.social-link:focus-visible,
+.contact-item a:focus-visible,
+.legal-links a:focus-visible,
+.footer-logo:focus-visible {
+    outline: 2px solid var(--immolshi-orange);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   TABLETTE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 50px 45px;
+
+        padding: 50px 0;
+    }
+
+    .footer-bottom {
+        padding: 22px 0;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .footer-container {
+        width: min(100% - 32px, var(--container-width));
+
+        grid-template-columns: 1fr;
+
+        gap: 38px;
+
+        padding: 45px 0;
+    }
+
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+
+    .footer-bottom {
+        width: min(100% - 32px, var(--container-width));
+
+        min-height: auto;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 18px;
+
+        padding: 25px 0;
+    }
+
+
+    .legal-links {
+        width: 100%;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
 }

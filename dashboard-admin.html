@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord Administrateur — ImmoLshi</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/dashboard-admin.css">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+</head>
+<body>
+ 
+<!-- BARRE SUPÉRIEURE -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo-container">
+        <div class="logo-badge">Immo<br>Lshi</div>
+        <div class="logo-text">
+          <h1>ImmoLshi</h1>
+          <p>Lubumbashi</p>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#">Accueil</a>
+        <a href="#">Annonces</a>
+      </nav>
+    </div>
+
+    <div class="nav-right">
+      <!-- Icône Thème (Lune alternative) -->
+      <button class="icon-btn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+      </button>
+      <!-- Icône Notification -->
+      <button class="icon-btn" style="position: relative;">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+        <span style="position: absolute; top: 4px; right: 4px; width: 6px; height: 6px; background-color: #D9383A; border-radius: 50%;"></span>
+      </button>
+      <!-- Profil Utilisateur Droite -->
+      <div class="user-profile-menu">
+        <img src="https://unsplash.com" alt="Jean-Pierre" class="avatar-sm">
+        <span class="profile-name">Jean-Pierre</span>
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-container">
+    
+    <!-- BARRE LATÉRALE GAUCHE -->
+    <aside class="sidebar">
+      <div class="sidebar-top-group">
+        <!-- Carte d'identité rapide -->
+        <div class="sidebar-profile">
+          <img src="https://unsplash.com" alt="Avatar principal" class="avatar-md">
+          <div>
+            <h4>Jean-Pierre Ilunga</h4>
+            <p>Administrateur système</p>
+          </div>
+        </div>
+
+        <!-- Tag Accès -->
+        <div class="admin-badge-container">
+          <div class="admin-badge">
+            <span class="badge-dot"></span> Accès administrateur
+          </div>
+        </div>
+
+        <!-- Menu Navigation principal -->
+        <nav class="sidebar-menu">
+          <a href="#" class="menu-item active">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+              <span>Vue globale</span>
+            </div>
+          </a>
+          <a href="users.html" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+              <span>Utilisateurs</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+              <span>Annonces</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>En attente</span>
+            </div>
+            <span class="nav-notif-badge">1</span>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+              <span>Paiements</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10a2 2 0 01-2 2h-2a2 2 0 01-2-2zm9 0v-4a2 2 0 00-2-2h-2a2 2 0 00-2 2v4a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
+              <span>Statistiques</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Journal d'activité</span>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            <div class="menu-item-left">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+              
+              <span>Paramètres</span>
+            </div>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="#" class="menu-item">
+          <div class="menu-item-left">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+            <span>Envoyer une notification</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- EN-TÊTE PRINCIPAL & CONTENU CORPS -->
+    <main class="main-content">
+      
+      <div class="header-title">
+        <h2>Tableau de bord administrateur</h2>
+        <p>Vue globale de la plateforme ImmoLshi · lundi 17 août 2026</p>
+      </div>
+
+      <!-- LES 5 PREMIÈRES CARTES (IMAGE 1) -->
+      <div class="stats-grid">
+        
+        <div class="card">
+          <div class="card-top">
+            <div class="card-icon-wrapper icon-orange">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            </div>
+            <span class="card-tag">+24 ce mois</span>
+          </div>
+          <div class="card-bottom">
+            <div class="card-value text-orange">1,284</div>
+            <div class="card-label">Utilisateurs totaux</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <div class="card-icon-wrapper icon-green">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <span class="card-tag">+12 ce mois</span>
+          </div>
+          <div class="card-bottom">
+            <div class="card-value text-green">794</div>
+            <div class="card-label">Annonces publiées</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <div class="card-icon-wrapper icon-yellow">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <span class="card-tag">À valider</span>
+          </div>
+          <div class="card-bottom">
+            <div class="card-value text-yellow">23</div>
+            <div class="card-label">En attente</div>
+          </div>
+        </div>
+
+       
+  
+    <!-- CARTE 1 : REVENUS PLATEFORME -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-icon-wrapper icon-">
+          <!-- Tracé exact de l'icône de graphique linéaire ascendant -->
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h6v6m0-6L10 16l-4-4-4 4"></path>
+          </svg>
+        </div>
+        <span class="badge-info-text">Commissions</span>
+      </div>
+      <div class="card-body-row">
+        <div class="main-metric-number text-blue-metric">$8,632</div>
+        <span class="metric-label-title">Revenus plateforme</span>
+      </div>
+    </div>
+
+    <!-- CARTE 2 : RÉSERVATIONS -->
+    <div class="card">
+      <div class="card-top">
+        <div class="icon-rounded-box box-orange-tint">
+          <!-- Tracé exact de l'icône de carte de crédit -->
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+          </svg>
+        </div>
+        <span class="badge-info-text">+31 ce mois</span>
+      </div>
+      <div class="card-body-row">
+        <div class="main-metric-number text-orange-metric">412</div>
+        <span class="metric-label-title">Réservations</span>
+      </div>
+    </div>
+
+      <!-- CARTE 3 : LITIGES OUVERTS --> 
+    <div class="custom-stat-card">
+      <div class="card-header-row">
+        <div class="icon-rounded-box box-red-tint">
+          <!-- Icône de triangle d'avertissement / attention -->
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+          </svg>
+        </div>
+        <span class="badge-info-text">En cours</span>
+      </div>
+      <div class="custom-stat-card">
+        <div class="card-header-row"></div>
+        <div class="main-metric-number text-red-metric">7</div>
+         <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+          </svg>
+      </div> 
+         <span class="badge-info-text">Litiges ouverts</span>
+      </div>
+    </div>
+
+
+    <div class="dashboard-container">
+        
+        <!-- SECTION SUPÉRIEURE : GRAPHICS -->
+        <div class="row section-top">
+            
+            <!-- Graphique Revenus & Utilisateurs -->
+            <div class="card card-revenue">
+                <h3>Revenus & utilisateurs (2026)</h3>
+                <div class="chart-placeholder">
+                    <!-- Graduation Y -->
+                    <div class="y-axis">
+                        <span>$24000</span>
+                        <span>$18000</span>
+                        <span>$12000</span>
+                        <span>$6000</span>
+                        <span>$0</span>
+                    </div>
+                    <!-- Zone centrale du graphique -->
+                    <div class="chart-area">
+                        <div class="grid-lines">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <!-- Courbe dessinée en SVG -->
+                        <svg class="line-chart" viewBox="0 0 600 200" preserveAspectRatio="none">
+                            <path d="M 0 170 Q 150 140, 300 110 T 600 30" fill="none" stroke="#be5a26" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <!-- Graduation X -->
+                    <div class="x-axis">
+                        <span>Janvier</span>
+                        <span>Février</span>
+                        <span>Mars</span>
+                        <span>Avril</span>
+                        <span>Mai</span>
+                        <span>Juin</span>
+                        <span>Juillet</span>
+                        <span>Août</span>
+                        <span>Septembre</span>
+                        <span>Octobre</span>
+                        <span>Novembre</span>
+                        <span>Décembre</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graphique Catégories (Donut) -->
+            <div class="card card-categories">
+                <h3>Catégories</h3>
+                <div class="donut-container">
+                    <svg class="donut-chart" viewBox="0 0 100 100">
+                        <!-- Cercle de fond / segments simulés (ordre: Appartement, Autres, Bureau, Studio, Villa) -->
+                        <circle class="segment appart" cx="50" cy="50" r="40" stroke-dasharray="40 210" stroke-dashoffset="0"></circle>
+                        <circle class="segment autres" cx="50" cy="50" r="40" stroke-dasharray="15 235" stroke-dashoffset="-40"></circle>
+                        <circle class="segment bureau" cx="50" cy="50" r="40" stroke-dasharray="15 235" stroke-dashoffset="-55"></circle>
+                        <circle class="segment studio" cx="50" cy="50" r="40" stroke-dasharray="25 225" stroke-dashoffset="-70"></circle>
+                        <circle class="segment villa" cx="50" cy="50" r="40" stroke-dasharray="115 135" stroke-dashoffset="-95"></circle>
+                        <circle class="segment villa" cx="50" cy="50" r="40" stroke-dasharray="115 135" stroke-dashoffset="-95"></circle>
+                        <circle class="segment villa" cx="50" cy="50" r="40" stroke-dasharray="115 135" stroke-dashoffset="-95"></circle>
+                        <circle class="segment villa" cx="50" cy="50" r="40" stroke-dasharray="115 135" stroke-dashoffset="-95"></circle>
+                        <circle class="segment villa" cx="50" cy="50" r="40" stroke-dasharray="115 135" stroke-dashoffset="-95"></circle>
+                        <circle class="segment villa" cx="50" cy="50" r="40" stroke-dasharray="115 135" stroke-dashoffset="-95"></circle>
+
+                    </svg>
+                </div>
+                <div class="legend">
+                    <span class="legend-item"><span class="dot appart"></span> Appartement</span>
+                    <span class="legend-item"><span class="dot autres"></span> Autres</span>
+                    <span class="legend-item"><span class="dot bureau"></span> Bureau</span>
+                    <span class="legend-item"><span class="dot studio"></span> Studio</span>
+                    <span class="legend-item"><span class="dot villa"></span> Villa</span>
+                      <span class="legend-item"><span class="dot villa"></span> Parcelle</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION INFÉRIEURE : EN ATTENTE & ACTIVITÉ -->
+        <div class="row section-bottom">
+            
+            <!-- Propriétaires en attente -->
+            <div class="card card-owners">
+                <div class="card-header">
+                    <h3>Propriétaires en attente</h3>
+                    <span class="badge">4</span>
+                </div>
+                <div class="owner-row">
+                    <div class="owner-info">
+                        <div class="owner-avatar">
+                            <i class="fa-solid fa-user-large"></i>
+                        </div>
+                        <div class="owner-details">
+                            <span class="owner-name">Marie Kabila</span>
+                            <span class="owner-email">marie.kabila@hotmail.com</span>
+                        </div>
+                    </div>
+                    <div class="owner-actions">
+                        <button class="btn-validate">
+                            <i class="fa-solid fa-user-check"></i> Valider
+                        </button>
+                        <button class="btn-icon-only">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activité récente -->
+            <div class="card card-activity">
+                <h3>Activité récente</h3>
+                <ul class="activity-list">
+                    <li>
+                        <span class="time">14:32</span>
+                        <span class="status-dot green"></span>
+                        <span class="log-text">Annonce validée — <strong>Villa Golf, Kasongo Patrick</strong></span>
+                    </li>
+                    <li>
+                        <span class="time">13:15</span>
+                        <span class="status-dot blue"></span>
+                        <span class="log-text">Nouveau propriétaire inscrit — <strong>Marie Kabila, Kampemba</strong></span>
+                    </li>
+                    <li>
+                        <span class="time">12:48</span>
+                        <span class="status-dot red"></span>
+                        <span class="log-text">Litige ouvert — <strong>Réservation R4, Studio Kamalondo</strong></span>
+                    </li>
+                    <li>
+                        <span class="time">11:20</span>
+                        <span class="status-dot green"></span>
+                        <span class="log-text">Paiement reçu — <strong>1 200 USD, Orange Money</strong></span>
+                    </li>
+                    <li>
+                        <span class="time">10:05</span>
+                        <span class="status-dot orange"></span>
+                        <span class="log-text">Annonce refusée — <strong>Photos insuffisantes, Magasin Katuba</strong></span>
+                    </li>
+                    <li>
+                        <span class="time">09:40</span>
+                        <span class="status-dot orange"></span>
+                        <span class="log-text">Remboursement traité — <strong>350 USD, Eric Mukendi</strong></span>
+                    </li>
+                    <li>
+                        <span class="time">08:15</span>
+                        <span class="status-dot red"></span>
+                        <span class="log-text">Compte suspendu — <strong>Fausse annonce détectée</strong></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouton d'aide flottant -->
+   
+  </dic>
+</div>
+</body>
+</html>

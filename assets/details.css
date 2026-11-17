@@ -273,6 +273,153 @@
   margin-top: 16px;
   cursor: pointer;
 }
+/* ==========================================================================
+   9. FOOTER (STYLISATION & ALIGNEMENT VERTICAL)
+   ========================================================================== */
+.main-footer {
+    background-color: #111827; /* Fond gris très sombre / anthracite */
+    color: #f3f4f6;            /* Texte clair */
+    padding: 60px 5% 20px 5%;
+    border-top: 4px solid var(--accent-orange);
+    width: 100%;
+}
+
+/* Grille principale : Aligne les 4 colonnes horizontalement par défaut */
+.footer-top {
+    max-width: 1300px;
+    margin: 0 auto 40px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes de tailles égales */
+    gap: 40px;
+}
+
+/* Style de la colonne Marque (Logo + Slogan) */
+.footer-brand-col .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-brand-col .logo-box-light {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(245, 158, 11, 0.2);
+    color: var(--accent-orange);
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.footer-brand-col .footer-logo span {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.footer-brand-col p {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Style commun à toutes les listes du footer */
+.footer-links-col h4 {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+/* Petit trait décoratif sous les titres du footer */
+.footer-links-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent-orange);
+}
+
+.footer-links-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Force l'alignement vertical des liens à l'intérieur */
+    gap: 12px;
+}
+
+.footer-links-col ul a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.footer-links-col ul a:hover {
+    color: var(--accent-orange);
+    padding-left: 5px; /* Petit effet de glissement au survol */
+}
+
+/* Section d'informations de contact directes */
+.contact-info li {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    line-height: 1.4;
+}
+
+.contact-info li i {
+    color: var(--accent-orange);
+    font-size: 1rem;
+    margin-top: 3px;
+    width: 16px; /* Bloque la largeur pour aligner les textes */
+    text-align: center;
+}
+
+/* Ligne inférieure de Copyright */
+.footer-bottom {
+    max-width: 1300px;
+    margin: 0 auto;
+    border-top: 1px solid #374151; /* Ligne de séparation fine */
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   AFFICHAGE VERTICAL REQUIS SUR MOBILES & TABLETTES
+   ========================================================================== */
+@media (max-width: 992px) {
+    /* Bascule la grille en 2 colonnes sur tablette */
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Force l'empilement 100% VERTICAL de toutes les colonnes sur smartphone */
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    
+    .footer-links-col h4 {
+        margin-bottom: 18px;
+    }
+}
 
 /* Responsive */
 @media (max-width: 992px) {

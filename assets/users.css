@@ -1,0 +1,275 @@
+/* Définition des variables de couleur basées sur l'image */
+:root {
+    --bg-page: #FAF8F5;
+    --bg-card: #FFFFFF;
+    --text-primary: #1A1A1A;
+    --text-secondary: #7A7A7A;
+    --border-color: #EAEAEA;
+    --th-bg: #F4EFEA;
+    
+    /* Couleurs des Badges et Statuts */
+    --role-prop-bg: #EAF2FF;
+    --role-prop-text: #2A64DB;
+    --role-client-bg: #E8F8F2;
+    --role-client-text: #1E825A;
+    
+    --status-actif-text: #1E825A;
+    --status-attente-bg: #FFF3CD;
+    --status-attente-text: #856404;
+    
+    /* Couleurs des boutons d'action */
+    --btn-icon-color: #7A7A7A;
+    --btn-danger: #DC3545;
+    --btn-orange-bg: #D96A27;
+}
+
+/* Réinitialisation globale */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* En-tête de la page */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+}
+
+/* Barre de recherche */
+.search-container {
+    position: relative;
+    width: 260px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px 14px 10px 38px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-card);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-container input:focus {
+    border-color: #B5A696;
+}
+
+/* Conteneur et Tableau */
+.table-responsive {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* En-tête du tableau */
+.user-table th {
+    background-color: var(--th-bg);
+    padding: 16px 24px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+/* Cellules du tableau */
+.user-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+    color: #4A4A4A;
+}
+
+.user-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Profil Utilisateur (Avatar + Infos) */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #EEE;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.user-email {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+/* Badges de Rôle */
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.badge-proprietaire {
+    background-color: var(--role-prop-bg);
+    color: var(--role-prop-text);
+}
+
+.badge-client {
+    background-color: var(--role-client-bg);
+    color: var(--role-client-text);
+}
+
+/* Statuts */
+.status {
+    font-weight: 600;
+}
+
+.status-actif {
+    color: var(--status-actif-text);
+}
+
+.status-attente {
+    background-color: var(--status-attente-bg);
+    color: var(--status-attente-text);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+/* Boutons d'action */
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn-action {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--btn-icon-color);
+    padding: 6px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s, background-color 0.2s;
+}
+
+.btn-action:hover {
+    opacity: 0.8;
+    background-color: #F5F5F5;
+}
+
+.btn-role-highlight {
+    background-color: var(--btn-orange-bg);
+    color: #FFFFFF;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.btn-role-highlight:hover {
+    background-color: #C2591D;
+    color: #FFFFFF;
+}
+
+.btn-delete:hover {
+    color: var(--btn-danger);
+}
+
+/* --- Sécurité & Accessibilité --- */
+.btn-action:focus-visible, 
+.search-container input:focus-visible {
+    outline: 2px solid var(--role-prop-text);
+    outline-offset: 2px;
+}
+
+/* --- Responsive basique pour écrans mobiles --- */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .search-container {
+        width: 100%;
+    }
+    .user-table thead {
+        display: none;
+    }
+    .user-table tr {
+        display: block;
+        border-bottom: 2px solid var(--border-color);
+        padding: 12px 0;
+    }
+    .user-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px;
+        border: none;
+    }
+    .user-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--text-secondary);
+    }
+}
