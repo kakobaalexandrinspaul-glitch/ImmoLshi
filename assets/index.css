@@ -155,7 +155,143 @@ a {
 
 
 
+/* =========================================
+   SECTION : COMMENT ÇA FONCTIONNE ?
+   Projet : ImmoLshi
+   ========================================= */
 
+/* Conteneur principal */
+.how-it-works {
+    width: 100%;
+    padding: 35px 20px 80px;
+    background-color: #f8f6f4;
+    box-sizing: border-box;
+}
+
+/* Titre principal */
+.how-title {
+    margin: 0 0 75px;
+    text-align: center;
+    color: #211f1e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Grille des 4 étapes */
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Chaque étape */
+.step {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Numéro circulaire */
+.step-number {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+
+    font-family: "Courier New", monospace;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Couleur orange */
+.step-orange {
+    background-color: #c85a1e;
+}
+
+/* Couleur verte */
+.step-green {
+    background-color: #20563b;
+}
+
+/* Titres des étapes */
+.step h3 {
+    margin: 0 0 12px;
+    color: #201e1d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* Description des étapes */
+.step p {
+    margin: 0;
+    max-width: 320px;
+    color: #737373;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.65;
+}
+
+/* =========================================
+   RESPONSIVE : TABLETTES
+   ========================================= */
+
+@media (max-width: 900px) {
+    .steps-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 50px;
+    }
+
+    .how-title {
+        margin-bottom: 55px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE : MOBILES
+   ========================================= */
+
+@media (max-width: 600px) {
+    .how-it-works {
+        padding: 40px 16px 60px;
+    }
+
+    .how-title {
+        font-size: 2.2rem;
+        margin-bottom: 45px;
+    }
+
+    .steps-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .step-number {
+        width: 70px;
+        height: 70px;
+        font-size: 1.4rem;
+        margin-bottom: 22px;
+    }
+
+    .step h3 {
+        font-size: 1.3rem;
+    }
+
+    .step p {
+        font-size: 1rem;
+        max-width: 340px;
+    }
+}
 
 
 
